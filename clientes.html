@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes - Atheneum Jaramillo Guarderas & Asociados</title>
+    <style>
+        :root{
+            --primary-color: #3F4346;
+            --secondary-color: #003366;
+            --header-height: 100px;
+            --header-heigth-movile: 50px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+        }
+        header {
+            height: 100px;
+            display: flex;
+            flex-direction: row;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1em 0;
+            justify-content: space-between;
+            text-align: center;
+            align-items: center;
+        }
+        nav{
+            padding-right: 10rem;
+            width: 100%;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 1em;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        section {
+            padding: 2em;
+            background-color: white;
+            margin: 1em 0;
+        }
+        footer {
+            position: sticky;
+            top: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .clientes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .logo{
+            margin-left: 10rem;
+            padding: 1rem;
+            height: 125px;
+            width: 200px;
+        }
+
+        /*::::::animacion::::::*/
+        section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+        }
+        h2{
+            width: 300px;
+            color: #333;
+            transition: color 0.3s ease;
+            margin: 2rem 0;
+        }
+
+        h2.animated-title {
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        h2.animated-title::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #333;
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        h2.animated-title:hover {
+            color: #007BFF;
+        }
+
+        h2.animated-title:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /*:::::: Carrusel::::::*/
+        .carousel-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-inner {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            transition: transform 0.5s ease; /* Transición suave para el desplazamiento */
+        }
+
+        .carousel-inner li {
+            flex: 0 0 auto;
+            width: 100%;
+        }
+
+        .carousel-inner img {
+            width: 300px;
+            height: auto;
+        }
+
+        .prev-btn, .next-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .prev-btn {
+            left: 10px;
+        }
+
+        .next-btn {
+            right: 10px;
+        }
+
+        /*:::::: Media::::::*/
+        @media screen and (max-width: 815px) {
+            /*:::::: barra de navegacion ::::::*/
+            .header {
+                height: var(--header-heigth-movile);
+                display: flex;
+                flex-direction: row-reverse;
+            }
+            .nav {
+                padding: 0;
+                width: 100%;
+                background-color: var(--primary-color);
+                position: absolute;
+                top: 50px;
+                z-index: 1;
+            }
+            .nav-list {
+                display: none;
+            }
+            .nav-list li {
+                height: 50px;
+            }
+            .nav-list li a {
+                font-family: sans-serif;
+            }
+            .nav-list.hidden {
+                display: flex;
+                flex-direction: column;
+                
+            }
+            .icono__menu {
+                margin: 0 1rem;
+            }
+            .logo {
+                display: none;
+            }
+            .carousel-inner {
+                display: flex;
+                flex-wrap: nowrap; /* Evita que se envuelvan los elementos */
+                overflow-x: auto; /* Permite desplazarse horizontalmente */
+                scroll-snap-type: x mandatory; /* Permite un desplazamiento suave */
+                -webkit-overflow-scrolling: touch; /* Desplazamiento suave en dispositivos iOS */
+            }
+
+            .carousel-inner li {
+                flex: 0 0 auto;
+                width: 100%;
+                scroll-snap-align: start; /* Alinea cada elemento al inicio del contenedor */
+            }
+
+            .prev-btn, .next-btn {
+                display: none; /* Oculta los botones previo y siguiente en pantallas pequeñas */
+            }
+        }
+       
+        @media (min-width: 815px) and (max-width: 1000px){
+            .header {
+                display: flex;
+                flex-direction: row;
+            }
+            .logo {
+                margin: 0;
+                padding: 0;
+                width: auto;
+                height: 100px;
+            }
+            .icono__menu {
+                display: none;
+            }
+            .nav {
+                margin: 0;
+                padding: 0;
+            }
+            .nav-list li a {
+                font-family: sans-serif;
+                font-size: 12px;
+            }
+        }
+        @media (min-width: 1000px) {
+            .icono__menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="./imagenes/logo final.png" alt="">
+        <img class="icono__menu" id="icono__menu" src="./imagenes/burger-menu.svg" alt="">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contactenos.html">Contáctenos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="clientes">
+        <h2 class="animated-title">CLIENTES ATENDIDOS</h2>
+        <!--<p>Nuestra vasta experiencia nos ha permitido tener clientes satisfechos con los servicios ofertados, entre ellos se encuentran:</p>-->
+        <div class="carousel-container">
+            <ul class="carousel-inner">
+                <li><img src="./imagenes/compania1.png" alt=""></li>
+                <li><img src="./imagenes/compania2.png" alt=""></li>
+                <li><img src="./imagenes/compania3.png" alt=""></li>
+                <li><img src="./imagenes/compania4.png" alt=""></li>
+                <li><img src="./imagenes/compania5.png" alt=""></li>
+                <!--
+                <li>COMPAÑÍA DE ALQUILER Y SUMINISTRO PETROLERO RS ROTH S.A.</li>
+                <li>OLEODUCTO DE CRUDOS PESADOS OCP ECUADOR</li>
+                <li>FREEPOINT COMMODITIES LLC.</li>
+                <li>FREEPOINT COMMODITIES SINGAPORE PTE. LTD.</li>
+                <li>CLUB LIGA DEPORTIVA UNIVERSITARIA DE QUITO LDU</li>
+                <li>ASOCIACION MUTUALISTA PICHINCHA</li>
+                <li>GRIFINE S.A.</li>
+                <li>GRUPO BIOASEP</li>
+                <li>HOUSING CONSTRUCTORES</li>
+                <li>MEDINUCLEAR</li>
+                <li>COMREP SERVICIOS ASOCIADOS S.A.</li>
+                <li>ECUAFERRI</li>
+                <li>DE LA CRUZ COMPAÑÍA LIMITADA</li>
+                <li>RETROCARSALES COMPAÑÍA LIMITADA</li>
+                <li>FRENOS Y FRENOS</li>
+                <li>SOCIEDAD CIVIL TERRAVALLE</li>
+                <li>TECHOIL COMPANY S.A.</li>
+                <li>PACIFIC GROUP</li>
+                <li>J WONG IMPORTACIONES</li>
+                -->
+            </ul>
+            <button class="prev-btn">&lt;</button>
+            <button class="next-btn">&gt;</button>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Atheneum Jaramillo Guarderas & Asociados</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const carousel = document.querySelector('.carousel-inner');
+            const slides = carousel.querySelectorAll('li');
+            
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+            const slideWidth = slides[0].clientWidth;
+            
+            // Función para mover al slide anterior
+            prevBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            });
+            
+            // Función para mover al siguiente slide
+            nextBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel();
+            });
+            
+            // Función para actualizar el carousel
+            function updateCarousel() {
+                const offset = -currentIndex * slideWidth;
+                carousel.style.transform = `translateX(${offset}px)`;
+            }
+        });
+        document.getElementById('icono__menu').addEventListener('click', function() {
+            document.querySelector('.nav-list').classList.toggle('hidden');
+        });
+        const iconoMenu = document.getElementById('icono__menu');
+        const originalSrc = './imagenes/burger-menu.svg';
+        const nuevaSrc = './imagenes/close.svg';
+
+        let isOpen = false;
+
+        iconoMenu.addEventListener('click', function() {
+            isOpen = !isOpen;
+
+            if (isOpen) {
+                iconoMenu.src = nuevaSrc;
+            } else {
+                iconoMenu.src = originalSrc;
+            }
+
+        });
+    </script>
+</body>
+</html>

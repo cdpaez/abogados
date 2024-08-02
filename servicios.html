@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Atheneum Jaramillo Guarderas & Asociados</title>
+    <style>
+        :root{
+            --primary-color: #3F4346;
+            --secondary-color: #003366;
+            --header-height: 100px;
+            --header-heigth-movile: 50px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .header {
+            height: var(--header-height);
+            display: flex;
+            flex-direction: row;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1em 0;
+            justify-content: space-between;
+            text-align: center;
+            align-items: center;
+        }
+        .nav{
+            padding-right: 10rem;
+            width: 100%;
+        }
+        .nav-list {
+            list-style: none;
+            padding: 0;
+        }
+        .nav-list li {
+            display: inline;
+            margin: 0 1em;
+        }
+        .nav-list li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .footer {
+            position: sticky;
+            top: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .logo{
+            margin-left: 10rem;
+            padding: 1rem;
+            height: 125px;
+            width: 200px;
+        }
+        
+        /*animacion*/
+        section {
+            opacity: 0.1;
+            transform: translateY(40px);
+            animation: fadeIn 1s forwards;
+        }
+
+        h2, h3 {
+            color: #333;
+            font-size: 18px;
+            margin: 1rem;
+        }
+
+        h2.animated-title, h3.animated-title {
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        h2.animated-title::after, h3.animated-title::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #333;
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        h2.animated-title:hover, h3.animated-title:hover {
+            color: #007BFF;
+        }
+
+        h2.animated-title:hover::after, h3.animated-title:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            margin:0  1rem;
+            padding: 0 6rem;
+        }
+        .titulo-principal {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /*:::::: Carrusel::::::*/
+        .carousel-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-inner {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            transition: transform 0.5s ease; /* Transición suave para el desplazamiento */
+        }
+
+        .carousel-inner li {
+            flex: 0 0 auto;
+            width: 100%;
+        }
+        .carousel-inner {
+            display: flex;
+            align-items: center;
+        }
+
+        .prev-btn, .next-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .prev-btn {
+            left: 10px;
+        }
+
+        .next-btn {
+            right: 10px;
+        }
+        @media screen and (max-width: 815px) {
+            /*:::::: barra de navegacion ::::::*/
+            .header {
+                height: var(--header-heigth-movile);
+                display: flex;
+                flex-direction: row-reverse;
+            }
+            .nav {
+                padding: 0;
+                width: 100%;
+                background-color: var(--primary-color);
+                position: absolute;
+                top: 50px;
+                z-index: 1;
+            }
+            .nav-list {
+                display: none;
+            }
+            .nav-list li {
+                height: 50px;
+            }
+            .nav-list li a {
+                font-family: sans-serif;
+            }
+            .nav-list.hidden {
+                display: flex;
+                flex-direction: column;
+                
+            }
+            .icono__menu {
+                margin: 0 1rem;
+            }
+            .logo {
+                display: none;
+            }
+            .fade-in {
+                margin: 0;
+                padding: 0;
+            }
+            .carousel-inner {
+                display: flex;
+                flex-wrap: nowrap; /* Evita que se envuelvan los elementos */
+                overflow-x: auto; /* Permite desplazarse horizontalmente */
+                scroll-snap-type: x mandatory; /* Permite un desplazamiento suave */
+                -webkit-overflow-scrolling: touch; /* Desplazamiento suave en dispositivos iOS */
+            }
+
+            .carousel-inner li {
+                flex: 0 0 auto;
+                width: 100%;
+                scroll-snap-align: start; /* Alinea cada elemento al inicio del contenedor */
+            }
+            .carousel-inner p {
+                margin: 4% 4%;
+            }
+
+            .prev-btn, .next-btn {
+                display: none; /* Oculta los botones previo y siguiente en pantallas pequeñas */
+            }
+        }
+        @media (min-width: 815px) and (max-width: 1000px){
+            .header {
+                display: flex;
+                flex-direction: row;
+            }
+            .logo {
+                margin: 0;
+                padding: 0;
+                width: auto;
+                height: 100px;
+            }
+            .icono__menu {
+                display: none;
+            }
+            .nav {
+                margin: 0;
+                padding: 0;
+            }
+            .nav-list li a {
+                font-family: sans-serif;
+                font-size: 12px;
+            }
+        }
+        @media (min-width: 1000px) {
+            .icono__menu {
+                display: none;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="./imagenes/logo final.png" alt="">
+        <img class="icono__menu" id="icono__menu" src="./imagenes/burger-menu.svg" alt="">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contactenos.html">Contáctenos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="fade-in">
+        
+        
+        <br>
+        <br>
+        <div class="carousel-container">
+            <ul class="carousel-inner">
+                <li>
+                    <h3 class="animated-title">CIVIL Y MERCANTIL (contratos – escrituras – notarías - cartera)</h3>
+                    <p>
+                        <br>Elaboración de contratos civiles y mercantiles. Sector público y privado.<br>
+                        <br>Auditoria de contratos de servicios de clientes públicos, privados y proveedores.<br>
+                        <br>Asesoramiento para cumplimiento de obligaciones contractuales.<br>
+                        <br>Elaboración y revisión de escrituras públicas de compraventa, hipotecas, cancelación de hipotecas, etc.<br>
+                        <br>Elaboración e inscripción de contratos mercantiles con reserva de dominio, prendas, cesión de derechos en el Registro Mercantil del cantón Quito.<br>
+                        <br>Elaboración de Informaciones sumarias.<br>
+                        <br>Elaboración de Declaraciones Juramentadas.<br>
+                        <br>Elaboración de Poderes especiales y generales.<br>
+                        <br>Ejecución de cobranzas extrajudiciales y judiciales. Ejecución de medidas: embargo, secuestro, prohibición de salir.<br>
+                    </p>
+                    
+                </li>
+                <li>
+                    <h3 class="animated-title">SOCIETARIO</h3>
+                    <p>
+                        <br>Constitución de compañías.<br>
+                        <br>Revisión de libros sociales de la compañía y Actas de Junta General.<br>
+                        <br>Cesión de acciones, registro y notificación a la Superintendencia de Compañías.<br>
+                        <br>Revisión y Elaboración de nombramientos e inscripción en el Registro Mercantil de los representantes legales de la empresa.<br>
+                        <br>Aumento de Capital, Disolución, Liquidación y cancelación de personas jurídicas.<br>
+                        <br>Asesoría de toda consulta referente a trámites administrativos societarios.<br>
+                    </p>
+                </li>
+                <li>
+                    <h3 class="animated-title">LABORAL</h3>
+                    <p>
+                        <br>Elaboración y revisión de formatos de contratos de trabajo, actas de finiquito, acciones de personal y adendum de contratos.<br>
+                        <br>Asesoría respecto de las formas de contratación de empleados y terminación de la relación laboral: Mutuo Acuerdo, Visto bueno y Despido Intempestivo.<br>
+                        <br>Asesoría de toda consulta o inquietud frente a los problemas diarios que se presentan con los trabajadores. Aplicación de Reglamento Interno de trabajo.<br>
+                        <br>Revisión de Reglamento Interno de Trabajo.<br>
+                        <br>Revisión de cumplimiento de obligaciones laborales conforme la nómina de trabajadores.<br>
+                        <br>Revisión de legalización de trabajadores con discapacidad y sustitutos.<br>
+                        <br>Elaboración y revisión de Manual de Funciones, profesiogramas, de acuerdo al cargo y puesto de trabajo.<br>
+                    </p>
+                </li>
+
+                <li>
+                    <h3 class="animated-title">PROPIEDAD INTELECTUAL</h3>
+                    <p>
+                        <br>Asesoría en Registro de marcas (servicio y producto).<br>
+                        <br>Asesoría en Registro de nombres comerciales.<br>
+                        <br>Asesoría en Registro de lemas comerciales.<br>
+                        <br>Tutelas administrativas.<br>
+                        <br>Búsquedas previas ante el Servicio Nacional de Derechos Intelectuales.<br>
+                    </p>
+                </li>
+                <li>
+                    <h3 class="animated-title">SEGURIDAD, SALUD Y AMBIENTE</h3>
+                    <p>
+                        <br>Revisión del Reglamento de Higiene y Seguridad de la empresa.<br>
+                        <br>Revisión de Comité Paritario, Subcomité y Brigadistas.<br>
+                        <br>Revisión y cumplimiento de normativa de SSA.<br>
+                    </p>
+                </li>
+                <li>
+                    <h3 class="animated-title">DEPORTIVO</h3>
+                    <p>
+                        <br>Elaboración de contratos con jugadores profesionales.<br>
+                        <br>Reforma de estatutos de los clubes.<br>
+                        <br>Elaboración del Reglamento Interno de clubes.<br>
+                        <br>Trámites administrativos ante el Ministerio del Deporte y Secretaria.<br>
+                    </p>
+                </li>
+                <li>
+                    <h3 class="animated-title">ADMINISTRATIVO</h3>
+                    <p>
+                        <br>Juicios en los Tribunales de lo Contencioso Administrativo y Tributario.<br>
+                        <br>Trámites Administrativos en los distintos Ministerios, Servicio de Rentas Internas, Contraloría General del Estado.<br>    
+                    </p>
+                </li>
+
+                <li>
+                    <h3 class="animated-title">PENAL Y TRÁNSITO</h3>
+                    <p>
+                        <br>Asesoría de las acciones penales que se pueden iniciar frente a delitos cometidos en la empresa por trabajadores.<br>
+                        <br>Asesoría de las acciones penales que se pueden iniciar frente a delitos cometidos contra la empresa.<br>
+                        <br>Asesoría de las contravenciones o delitos penales de tránsito cometidos por funcionarios de la empresa.<br>
+                    </p>
+                </li>
+
+            </ul>
+            
+        </div>
+        <button class="prev-btn">&lt;</button>
+        <button class="next-btn">&gt;</button>
+        
+        <!--
+        <h3 class="animated-title">CIVIL Y MERCANTIL (contratos – escrituras – notarías - cartera)</h3>
+        <ul>
+            <li>Elaboración de contratos civiles y mercantiles. Sector público y privado.</li>
+            <li>Auditoria de contratos de servicios de clientes públicos, privados y proveedores.</li>
+            <li>Asesoramiento para cumplimiento de obligaciones contractuales.</li>
+            <li>Elaboración y revisión de escrituras públicas de compraventa, hipotecas, cancelación de hipotecas, etc.</li>
+            <li>Elaboración e inscripción de contratos mercantiles con reserva de dominio, prendas, cesión de derechos en el Registro Mercantil del cantón Quito.</li>
+            <li>Elaboración de Informaciones sumarias.</li>
+            <li>Elaboración de Declaraciones Juramentadas.</li>
+            <li>Elaboración de Poderes especiales y generales.</li>
+            <li>Ejecución de cobranzas extrajudiciales y judiciales. Ejecución de medidas: embargo, secuestro, prohibición de salir.</li>
+        </ul>
+        <br>
+        <h3 class="animated-title">SOCIETARIO</h3>
+        <ul>
+            <li>Constitución de compañías.</li>
+            <li>Revisión de libros sociales de la compañía y Actas de Junta General.</li>
+            <li>Cesión de acciones, registro y notificación a la Superintendencia de Compañías.</li>
+            <li>Revisión y Elaboración de nombramientos e inscripción en el Registro Mercantil de los representantes legales de la empresa.</li>
+            <li>Aumento de Capital, Disolución, Liquidación y cancelación de personas jurídicas.</li>
+            <li>Asesoría de toda consulta referente a trámites administrativos societarios.</li>
+        </ul>
+        <br>
+        <h3 class="animated-title">LABORAL</h3>
+        <ul>
+            <li>Elaboración y revisión de formatos de contratos de trabajo, actas de finiquito, acciones de personal y adendum de contratos.</li>
+            <li>Asesoría respecto de las formas de contratación de empleados y terminación de la relación laboral: Mutuo Acuerdo, Visto bueno y Despido Intempestivo.</li>
+            <li>Asesoría de toda consulta o inquietud frente a los problemas diarios que se presentan con los trabajadores. Aplicación de Reglamento Interno de trabajo.</li>
+            <li>Revisión de Reglamento Interno de Trabajo.</li>
+            <li>Revisión de cumplimiento de obligaciones laborales conforme la nómina de trabajadores.</li>
+            <li>Revisión de legalización de trabajadores con discapacidad y sustitutos.</li>
+            <li>Elaboración y revisión de Manual de Funciones, profesiogramas, de acuerdo al cargo y puesto de trabajo.</li>
+        </ul>
+        <br>
+        <h3 class="animated-title">PROPIEDAD INTELECTUAL</h3>
+        <ul>
+            <li>Asesoría en Registro de marcas (servicio y producto).</li>
+            <li>Asesoría en Registro de nombres comerciales.</li>
+            <li>Asesoría en Registro de lemas comerciales.</li>
+            <li>Tutelas administrativas.</li>
+            <li>Búsquedas previas ante el Servicio Nacional de Derechos Intelectuales.</li>
+        </ul>
+        <br>
+        <h3 class="animated-title">SEGURIDAD, SALUD Y AMBIENTE</h3>
+        <ul>
+            <li>Revisión del Reglamento de Higiene y Seguridad de la empresa.</li>
+            <li>Revisión de Comité Paritario, Subcomité y Brigadistas.</li>
+            <li>Revisión y cumplimiento de normativa de SSA.</li>
+        </ul>
+        <br>
+        <h3 class="animated-title">DEPORTIVO</h3>
+        <ul>
+            <li>Elaboración de contratos con jugadores profesionales.</li>
+            <li>Reforma de estatutos de los clubes.</li>
+            <li>Elaboración del Reglamento Interno de clubes.</li>
+            <li>Trámites administrativos ante el Ministerio del Deporte y Secretaria.</li>
+        </ul>
+        <br>
+        <h3 class="animated-title">ADMINISTRATIVO</h3>
+        <ul>
+            <li>Juicios en los Tribunales de lo Contencioso Administrativo y Tributario.</li>
+            <li>Trámites Administrativos en los distintos Ministerios, Servicio de Rentas Internas, Contraloría General del Estado.</li>
+        </ul>
+        <br>
+        <h3 class="animated-title">PENAL Y TRÁNSITO</h3>
+        <ul>
+            <li>Asesoría de las acciones penales que se pueden iniciar frente a delitos cometidos en la empresa por trabajadores.</li>
+            <li>Asesoría de las acciones penales que se pueden iniciar frente a delitos cometidos contra la empresa.</li>
+            <li>Asesoría de las contravenciones o delitos penales de tránsito cometidos por funcionarios de la empresa.</li>
+        </ul>
+        
+
+        <p>En otras áreas del derecho ecuatoriano vigente se extenderá nuestro servicio de Asesoría y Patrocinio Legal, frente a cualquier problema específico y concreto que se presente dentro de la empresa.</p>
+        -->
+
+    </section>
+    <footer class="footer">
+        <p>&copy; 2024 Atheneum Jaramillo Guarderas & Asociados</p>
+    </footer>
+    
+<script>
+        /*proceso para abrir y cerrar el menu*/
+        document.getElementById('icono__menu').addEventListener('click', function() {
+            document.querySelector('.nav-list').classList.toggle('hidden');
+        });
+
+        const iconoMenu = document.getElementById('icono__menu');
+        const originalSrc = './imagenes/burger-menu.svg';
+        const nuevaSrc = './imagenes/close.svg';
+
+        let isOpen = false;
+
+        iconoMenu.addEventListener('click', function() {
+            isOpen = !isOpen;
+
+            if (isOpen) {
+                iconoMenu.src = nuevaSrc;
+            } else {
+                iconoMenu.src = originalSrc;
+            }
+
+        });
+        
+        /*proceso para animar mover entre divs la informacion*/
+        document.addEventListener('DOMContentLoaded', ()=> {
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const carousel = document.querySelector('.carousel-inner');
+            const slides = carousel.querySelectorAll('li');
+            
+            let currentIndex = 0; /*inicializar indice en cero*/
+            console.log('currentIndex', currentIndex);
+            const totalSlides = slides.length; /*contar el total de diapos*/
+            console.log('totalSlides', totalSlides);
+            const slideWidth = slides[0].clientWidth; /*devuelve el ancho de cada diapo en el carrusel*/
+            console.log('clientwidth', slideWidth);
+            // Función para mover al slide anterior
+            prevBtn.addEventListener('click', ()=> {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            });
+            
+            // Función para mover al siguiente slide
+            nextBtn.addEventListener('click', ()=> {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel();
+            });
+            
+            // Función para actualizar el carousel
+            function updateCarousel() {
+                const offset = -currentIndex * slideWidth;
+                carousel.style.transform = `translateX(${offset}px)`;
+            }
+        });
+</script>
+</body>
+</html>
