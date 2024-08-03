@@ -100,7 +100,7 @@
             animation-delay: 0.5s;
         }
 
-        #quienes-somos img {
+        .quienes-somos img {
             height: 90%;
             width: auto;
             border-radius: 10px;
@@ -144,8 +144,7 @@
             transform: none;
         }
 
-        /*
-        @media screen and (max-width: 815px) {
+        @media (max-width: 815px) {
             
             .header {
                 height: var(--header-heigth-movile);
@@ -187,6 +186,10 @@
                 justify-content: center;
                 align-items: center;
             }
+            .quienes-somos {
+                width: 100%;
+                height: calc(50vh);
+            }
         }
         @media (min-width: 815px) and (max-width: 1000px){
             .header {
@@ -216,12 +219,6 @@
                 display: none;
             }
         }
-        */
-        @media (min-width: 1000px) {
-            #icono__menu {
-                display: none;
-            }
-        }
     </style>
 </head>
 <body>
@@ -246,7 +243,7 @@
         
 
         <p>Atheneum Jaramillo Guarderas & Asociados es un despacho de abogados con una sólida trayectoria en el ámbito legal ecuatoriano. Nuestro compromiso es brindar asesoría legal de calidad, basada en principios de ética, profesionalismo y eficiencia.</p>
-        <img src="imagenes/equipo.jpg" alt="Nuestro equipo">
+        <img class="quienes-somos" src="imagenes/equipo.jpg" alt="Nuestro equipo">
     </section>
     <footer>
         <p>&copy; 2024 Atheneum Jaramillo Guarderas & Asociados</p>

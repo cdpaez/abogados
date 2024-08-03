@@ -151,7 +151,7 @@
             width: 100%;
         }
         /* Media Queries para dispositivos con ancho máximo de 419px */
-        @media screen and (max-width: 815px) {
+        @media (max-width: 815px) {
             /*:::::: barra de navegacion ::::::*/
             .header {
                 height: var(--header-heigth-movile);
@@ -193,18 +193,73 @@
                 border:4px solid black;
             }
             
-            #contacto {
+            .contacto_formulario {
+                display: grid;
+                grid-template-rows: auto 1fr;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-areas: 
+                "titulo-contactenos titulo-contactenos"
+                "div-informacion div-formulario";
+            }
+            #titulo-contactenos {
+                grid-area: titulo-contactenos;
+                text-align: center;
+                font-size: 3rem;
+            }
+            #div-informacion {
+                background-color: white;
+                margin: 10px;
+                padding: 10px;
+                grid-area: div-informacion;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-            }
-            
-            .contacto_formulario, .contacto_maps {
-                width: 100%;
-            }
-
-            .contacto_formulario center {
+                align-items: left;
                 text-align: left;
+                gap: 1em;
+            }
+            #div-informacion h3{
+                display: flex;
+                font-size: 9px;   
+            }
+            #div-informacion p {
+                font-size: 9px;
+            }
+            #div-informacion img{
+                margin-right: 5px;
+                height: 12px;
+                width: auto;
+            }
+            #div-informacion a {
+                font-size: 12px;
+            }
+            #div-formulario {
+                margin: 0;
+                grid-area: div-formulario;
+                width: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                text-align: left;
+            }
+            .formulario input,
+            .formulario textarea {
+                padding: 0.5em;
+                margin-bottom: 0.5em;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                width: 95%;
+            }
+            .formulario button {
+                background-color: var(--primary-color);
+                color: white;
+                padding: 0.7em;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            .formulario button:hover {
+                background-color: #002244;
             }
         }
         
@@ -304,27 +359,27 @@
     <footer>
         <p>&copy; 2024 Atheneum Jaramillo Guarderas & Asociados</p>
     </footer>
-<script>
-    document.getElementById('icono__menu').addEventListener('click', function() {
-            document.querySelector('.nav-list').classList.toggle('hidden');
-        });
-        const iconoMenu = document.getElementById('icono__menu');
-        const originalSrc = './imagenes/burger-menu.svg';
-        const nuevaSrc = './imagenes/close.svg';
+    <script>
+        document.getElementById('icono__menu').addEventListener('click', function() {
+                document.querySelector('.nav-list').classList.toggle('hidden');
+            });
+            const iconoMenu = document.getElementById('icono__menu');
+            const originalSrc = './imagenes/burger-menu.svg';
+            const nuevaSrc = './imagenes/close.svg';
 
-        let isOpen = false;
+            let isOpen = false;
 
-        iconoMenu.addEventListener('click', function() {
-            isOpen = !isOpen;
+            iconoMenu.addEventListener('click', function() {
+                isOpen = !isOpen;
 
-            if (isOpen) {
-                iconoMenu.src = nuevaSrc;
-            } else {
-                iconoMenu.src = originalSrc;
-            }
+                if (isOpen) {
+                    iconoMenu.src = nuevaSrc;
+                } else {
+                    iconoMenu.src = originalSrc;
+                }
 
-        });
-</script>
+            });
+    </script>
 </body>
 
 </html>
