@@ -113,7 +113,8 @@
             animation-delay: 0.5s;
             margin: 1rem;
             font-size: 1.2rem;
-        text-align: justify;        }
+            text-align: justify;
+        }
 
         @keyframes fadeIn {
             to {
@@ -127,7 +128,7 @@
                 transform: translateY(0);
             }
         }
-        @media screen and (max-width: 815px) {
+        @media (max-width: 815px) {
             .header {
                 height: var(--header-heigth-movile);
                 display: flex;
@@ -186,9 +187,27 @@
             }
         }
         @media (min-width: 1000px) {
+            
             .icono__menu {
                 display: none;
             }
+            #historia {
+                max-width: 2000px;
+                max-height: 3000px;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                margin: 2vw 6vw;
+                padding: 5rem;
+            }
+            #historia h2 {
+                font-size: 4vw;
+            }
+            #historia p {
+                font-size: 1.7vw;
+            }
+            
         }
     </style>
 </head>
