@@ -3,40 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fontmfamil -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <!-- estilos propios -->
     <link rel="stylesheet" href="./assets/css/index.css">
     <title>Atheneum Jaramillo Guarderas & Asociados</title>
     
     
 </head>
 <body>
- 
-    <header class="header">
-        <img class="icono__menu" id="icono__menu" src="./imagenes/burger-menu.svg" alt="">
-        <nav class="nav">
+    <div class="envoltorio__principal">
+        <!--encabezado-->
+        <header class="header__principal">
+            <img class="header__principal--logo" src="./imagenes/logo.jpg" alt="Oficina de abogados">
+            <button id="menu-toggle" class="btn__menu"><i class="fa-solid fa-bars"></i></button>
+            <nav id="navbar" class="navbar">
+                <span class="line"></span>
+                <ul class="navbar__list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="equipo.html">Equipo</a></li>
+                    <li><a href="historia.html">Historia</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contactenos.html">Contáctenos</a></li>
+                </ul>
+                  <span class="line"></span>
+            </nav>
             
-            <ul class="nav-list">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-                <li><a href="equipo.html">Equipo</a></li>
-                <li><a href="historia.html">Historia</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contactenos.html">Contáctenos</a></li>
-            </ul>
-        </nav>
+        </header>    
+        <!-- contenido principal-->
+        <section class="section__inicio" id="inicio">
+            <h1>ATHENEUM</h1>
+            <h2>JARAMILLO GUARDERAS & ASOCIADOS</h2>
+            <p>Ofrecemos soluciones legales integrales con ética y profesionalismo. </p>
+            <p>Nuestro equipo de abogados está especializado en diversas áreas del derecho para atender todas sus necesidades legales.</p>
+            
+        </section>
         
-    </header>
-    
-   <!-- contenido principal-->
-    <section class="inicio" id="inicio">
-        <h2>ATHENEUM JARAMILLO GUARDERAS & ASOCIADOS</h2>
-        <p>Ofrecemos soluciones legales integrales con ética y profesionalismo. Nuestro equipo de abogados está especializado en diversas áreas del derecho para atender todas sus necesidades legales.</p>
-        <img class="logo-section" src="./imagenes/logo_atheneum.png" alt="Oficina de abogados">
-    </section>
+        <!--pie de pagina-->
+        <footer class="footerbar">
+            <p>&copy; 2024 Atheneum Jaramillo Guarderas & Asociados</p>
+        </footer>
+    </div>
     
     
-    <footer class="footer">
-        <p>&copy; 2024 Atheneum Jaramillo Guarderas & Asociados</p>
-    </footer>
-
+   
+    <script src="./assets/js/menu.js"></script>
 </body>
 </html>
