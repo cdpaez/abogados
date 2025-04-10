@@ -232,18 +232,32 @@ span {
 
 /* ===== TABLET: 481px a 1024px ===== */
 @media (min-width: 481px) {
+
     body {
-        font-size: 16px;
-        padding: 2rem;
+        height: 100%;
+        padding: 2em;
+       
     }
 
     h1 {
         font-size: 2rem;
     }
 
-    .navbar {
-        flex-direction: row;
+    .envoltorio__principal {
+        min-height: 100vh;
+        /* ocupa toda la pantalla */
+        display: flex;
+        flex-direction: column;
     }
+
+    .section__inicio {
+        flex: 1;
+        /* clave para que crezca */
+        padding: 0;
+        margin: 0;
+    }
+
+
 }
 
 /* ===== DESKTOP: 1025px en adelante ===== */
