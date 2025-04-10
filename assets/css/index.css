@@ -37,7 +37,7 @@ span {
 .btn__menu {
     width: 100%;
 
-    padding: 1em;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -167,9 +167,9 @@ span {
     line-height: 2em;
     width: 100%;
     letter-spacing: 0.2em;
-   
+
     font-family: 'Playfair Display', serif;
-   
+
     animation: fadeIn 0.6s ease-out;
 }
 
@@ -185,7 +185,7 @@ span {
     }
 }
 
-.section__inicio--pizq{
+.section__inicio--pizq {
     text-align: center;
     margin: 1em 0;
     padding: 2em;
@@ -199,6 +199,7 @@ span {
     transform: translateX(-200px);
     animation: slideIn 0.8s ease-out forwards;
 }
+
 .section__inicio--pder {
     text-align: center;
     margin: 1em 0;
