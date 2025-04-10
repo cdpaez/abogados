@@ -26,7 +26,6 @@ span {
   /* ocupa toda la pantalla */
   display: flex;
   flex-direction: column;
-  
 }
 
 .header__principal {
@@ -86,25 +85,25 @@ span {
 
 @keyframes scale-up-top {
   0% {
-    transform: scale(.5);
-    transform-origin: center top
+      transform: scale(.5);
+      transform-origin: center top
   }
 
   100% {
-    transform: scale(1);
-    transform-origin: center top
+      transform: scale(1);
+      transform-origin: center top
   }
 }
 
 @keyframes scale-up-bottom {
   0% {
-    transform: scale(1);
-    transform-origin: center top
+      transform: scale(1);
+      transform-origin: center top
   }
 
   100% {
-    transform: scale(.5);
-    transform-origin: center top
+      transform: scale(.5);
+      transform-origin: center top
   }
 }
 
@@ -144,12 +143,11 @@ span {
   color: #fff;
 }
 
-/* contenido principal del sitio */
-.quienes__somos {
+.presentacion__historia {
   flex: 1;
 }
 
-.quienes__somos h1 {
+.presentacion__historia h1 {
   font-size: 2em;
   font-weight: 700;
 
@@ -171,20 +169,19 @@ span {
 
 @keyframes fadeIn {
   from {
-    opacity: 0;
-    transform: translateY(100px);
+      opacity: 0;
+      transform: translateY(100px);
   }
 
   to {
-    opacity: 1;
-    transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
   }
 }
 
-.quienes__somos--pizq {
+.p1, .p3 {
   text-align: center;
-  margin: 1em 0;
-  padding: 2em;
+  padding: 1em;
   line-height: 2em;
   letter-spacing: 0.2em;
   font-family: 'Merriweather', serif;
@@ -196,7 +193,7 @@ span {
   animation: slideIn 0.8s ease-out forwards;
 }
 
-.quienes__somos--pder {
+.p2, .p4 {
   text-align: center;
   margin: 1em 0;
   padding: 2em;
@@ -210,16 +207,10 @@ span {
   animation: slideIn 0.8s ease-out forwards;
 }
 
-.quienes__somos--banner {
-  width: 100%;
-  padding: 2em;
-
-}
-
 @keyframes slideIn {
   to {
-    opacity: 1;
-    transform: translateX(0);
+      opacity: 1;
+      transform: translateX(0);
   }
 }
 
@@ -236,38 +227,40 @@ span {
 @media (min-width: 481px) {
 
   body {
-    height: 100%;
-    padding: 2em;
+      height: 100%;
+      padding: 2em;
 
   }
 
   .envoltorio__principal {
-    min-height: 100vh;
-    /* ocupa toda la pantalla */
-    display: flex;
-    flex-direction: column;
+      min-height: 100vh;
+      /* ocupa toda la pantalla */
+      display: flex;
+      flex-direction: column;
   }
 
-  .quienes__somos {
-    flex: 1;
-    /* clave para que crezca */
-    padding: 0;
-    margin: 0;
+  .section__inicio {
+      flex: 1;
+      /* clave para que crezca */
+      padding: 0;
+      margin: 0;
   }
 
-  .quienes__somos h1 {
-    font-size: 3em;
-    margin: 0;
-    padding: 0;
+  .section__inicio h1 {
+      font-size: 6em;
+      margin: 0;
+      padding: 0;
   }
 
-
-  .quienes__somos--pizq {
-    font-size: 1.3em;
+  .section__inicio h2 {
+      font-size: 2em;
+      padding: 0;
   }
-
-  .quienes__somos--pder {
-    font-size: 1.3em;
+  .section__inicio--pizq{
+      font-size: 1.3em;
+  }
+  .section__inicio--pder{
+      font-size: 1.3em;
   }
 
 
@@ -276,147 +269,136 @@ span {
 /* ===== DESKTOP: 1025px en adelante ===== */
 @media (min-width: 1025px) {
   * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
   }
 
   html,
   body {
-    height: 100%;
-    padding: 0;
-    margin: 0;
+      height: 100%;
+      padding: 0;
+      margin: 0;
   }
   span{
-    display: flex;
-    border-bottom: 2px solid whitesmoke;
-    border-top: 2px solid whitesmoke;
-    width: 100%;
-    height: 10px;
+      display: flex;
+      border-bottom: 2px solid whitesmoke;
+      border-top: 2px solid whitesmoke;
+      width: 100%;
+      height: 10px;
 
-}
-
+  }
   .envoltorio__principal {
-    min-height: 100vh;
-    /* ocupa toda la pantalla */
-    display: flex;
-    flex-direction: column;
+      min-height: 100vh;
+      /* ocupa toda la pantalla */
+      display: flex;
+      flex-direction: column;
   }
 
-  .quienes__somos {
-    /* clave para que crezca */
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    align-items: center;
-    padding: 0;
-    margin: 0;
+  .section__inicio {
+      flex: 1;
+      /* clave para que crezca */
+      padding: 0;
+      margin: 0;
   }
-
 
   /* estilos para el header */
   .header__principal {
-    width: 100%;
-    background-color: var(--primary-color);
+      width: 100%;
+      background-color: var(--primary-color);
   }
 
   .header__principal--logo {
-    width: 10%;
-    padding: 2em;
-    display: inline;
+      width: 10%;
+      padding: 2em;
+      display: inline;
   }
 
   .btn__menu {
-    display: none;
+      display: none;
   }
 
   .navbar {
-    width: 100%;
-    background-color: var(--primary-color);
-    opacity: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    pointer-events: auto;
+      width: 100%;
+      background-color: var(--primary-color);
+      opacity: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      pointer-events: auto;
   }
 
   .navbar__list {
-   
-    text-align: end;
-    display: flex;
-    flex-direction: row;
+      text-align: end;
+      display: flex;
+      flex-direction: row;
   }
 
   .navbar__list li {
-    display: flex;
-    flex-direction: row;
-    color: white;
-    background-color: var(--primary-color);
-    border: none;
+      
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: white;
+      background-color: var(--primary-color);
+      border: none;
 
-    backdrop-filter: none;
-    background: var(--primary-color);
-    box-shadow: none;
+      backdrop-filter: none;
+      background: var(--primary-color);
+      box-shadow: none;
   }
 
 
   .navbar__list li a {
-    display: flex;
-    flex-direction: row;
-    color: white;
-    font-size: 1.5em;
-    white-space: nowrap;
-    
+      display: flex;
+      flex-direction: row;
+      color: white;
+      font-size:1.5em;
+      white-space: nowrap;
   }
 
   .navbar__list li a:hover {
-    background-color: whitesmoke;
-    color: var(--primary-color);
+      background-color: whitesmoke;
+      color: var(--primary-color);
   }
-  .quienes__somos--info{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 2em;
-  }
+
   /* estilos para el contenido  */
-  .quienes__somos h1 {
-    font-size: 3em;
-    padding: 0;
-    margin: 0;
+  .section__inicio h1 {
+      font-size: 7em;
+      padding: 0;
+      margin: 0;
   }
 
-  .quienes__somos--pizq {
-    text-align: center;
-    line-height: 2em;
-    letter-spacing: 0.2em;
-    font-size: 1em;
+  .section__inicio h2 {
+      font-size: 2em;
+      padding: 0;
+      margin: 0;
+  }
+
+  .section__inicio--pizq {
+      text-align: center;
+      line-height: 2em;
+      letter-spacing: 0.2em;
+      font-size: 2em;
 
   }
 
-  .quienes__somos--pder {
-    text-align: center;
-    line-height: 2em;
-    letter-spacing: 0.2em;
-    font-size: 1em;
-  }
-
-  .quienes__somos--banner {
-    width: 100%;
-
+  .section__inicio--pder {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      line-height: 2em;
+      letter-spacing: 0.2em;
+      font-size: 1.5em;
   }
 
   .footerbar {
-    width: 100%;
-    padding: 2em;
+      padding: 2em;
   }
 
   .footerbar p {
-    font-size: 1.5em;
+      font-size: 1.5em;
   }
 }

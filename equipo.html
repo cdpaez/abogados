@@ -3,382 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icono de la pagina -->
+    <link rel="icon" href="/imagenes/balanza.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fontmfamil -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <!-- estilos propios -->
+    <link rel="stylesheet" href="./assets/css/equipo.css">
     <title>Abogados - Atheneum Jaramillo Guarderas & Asociados</title>
-    <style>
-        :root{
-            --primary-color: #3F4346;
-            --secondary-color: #003366;
-            --header-height: 100px;
-            --header-heigth-movile: 50px;
-        }
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            height: 100px;
-            display: flex;
-            flex-direction: row;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1em 0;
-            justify-content: space-between;
-            text-align: center;
-            align-items: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        nav{
-            padding-right: 10rem;
-            width: 100%;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 1em;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        section {
-            display: grid;
-            grid-template-rows: repeat(4,1fr);
-            grid-template-columns: repeat(2,1fr);
-            grid-template-areas: 
-                "f1 f1"
-                "f2 f3"
-                "f4 f5"
-                "f6 f7";
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-        }
-        #f1 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            grid-area: f1;
-            
-        }
-        #f2 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            grid-area: f2;
-            
-        }
-        #f3 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            grid-area: f3;
-            
-        }
-        #f4 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            grid-area: f4;
-            
-        }
-        #f5 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            grid-area: f5;
-            
-        }
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-        }
-        .logo{
-            margin-left: 10rem;
-            padding: 1rem;
-            height: 125px;
-            width: 200px;
-            
-        }
-        .abogado img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 50%;
-            border: 2px solid #ccc;
-        }
-        .abogado h3 {
-            margin: 0.5em 0 0.2em 0;
-        }
-        .abogado p {
-            margin: 0.2em 0;
-        }
-        
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        #abogados {
-            text-align: center;
-            padding: 50px;
-            background-color: #f8f9fa;
-            transition: background-color 0.5s ease-in-out;
-        }
-
-        #abogados:hover {
-            background-color: #e2e6ea;
-        }
-
-        #abogados h2 {
-            font-size: 2.5em;
-            color: #343a40;
-            margin-bottom: 20px;
-            opacity: 0;
-            transform: translateY(-20px);
-            animation: fadeInDown 1s forwards;
-        }
-
-        .abogado {
-            margin: 20px 0;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s forwards;
-            animation-delay: 0.5s;
-        }
-
-        .abogado img {
-            width: 80%;
-            max-width: 300px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .abogado img:hover {
-            transform: scale(1.1);
-        }
-
-        .abogado h3 {
-            font-size: 1.5em;
-            color: #343a40;
-            margin-top: 10px;
-        }
-
-        .abogado p {
-            font-size: 1.1em;
-            color: #6c757d;
-        }
-
-        @keyframes fadeInDown {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        #abogados.active h2,
-        #abogados.active .abogado {
-            opacity: 1;
-            transform: none;
-        }
-        
-        @media screen and (max-width: 815px) {
-            /*:::::: barra de navegacion ::::::*/
-            .header {
-                height: var(--header-heigth-movile);
-                display: flex;
-                flex-direction: row-reverse;
-            }
-            .nav {
-                padding: 0;
-                width: 100%;
-                background-color: var(--primary-color);
-                position: absolute;
-                top: 50px;
-                z-index: 1;
-            }
-            .nav-list {
-                display: none;
-            }
-            .nav-list li {
-                height: 50px;
-            }
-            .nav-list li a {
-                font-family: sans-serif;
-            }
-            .nav-list.hidden {
-                display: flex;
-                flex-direction: column;
-                
-            }
-            #abogados {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                align-items: center;
-            }
-            .icono__menu {
-                margin: 0 1rem;
-            }
-            .logo {
-                display: none;
-            }
-            .abogado {
-                width: 100%;
-            
-            }
-        }
-        /* Media Queries para dispositivos con un intervalo (420-719) */
-        @media (min-width: 816px) and (max-width: 1000px){
-            .header {
-                display: flex;
-                flex-direction: row;
-            }
-            .logo {
-                margin: 0;
-                padding: 0;
-                width: auto;
-                height: 100px;
-            }
-            .icono__menu {
-                display: none;
-            }
-            .nav {
-                margin: 0;
-                padding: 0;
-            }
-            .nav-list li a {
-                font-family: sans-serif;
-                font-size: 12px;
-            }
-        }
-        @media (min-width: 1000px) {
-            .icono__menu {
-                display: none;
-            }
-        }
-    </style>
     
 </head>
 
 <body>
-    <header class="header">
-        <img class="logo" id="logo" src="./imagenes/logo final.png" alt="">
-        <img class="icono__menu" id="icono__menu" src="./imagenes/burger-menu.svg" alt="">
-        <nav class="nav">
-            <ul class="nav-list">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-                <li><a href="equipo.html">Equipo</a></li>
-                <li><a href="historia.html">Historia</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contactenos.html">Contáctenos</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="abogados">
-
-        
-        <div class="abogado" id="f1">
-            <img src="imagenes/abogado1.jpg" alt="Abogado 1">
-            <h3>Dr. Diego Jaramillo</h3>
-            <p>Especialista en derecho corporativo y comercial. Con más de 10 años de experiencia asesorando a empresas nacionales e internacionales.</p>
-        </div>
+    <div class="envoltorio__principal">
+        <header class="header__principal">
+            <img class="header__principal--logo" src="./imagenes/logoIndex.png" alt="Oficina de abogados">
+            <button id="menu-toggle" class="btn__menu"><i class="fa-solid fa-bars"></i></button>
+            <nav id="navbar" class="navbar">
+                <span class="line"></span>
+                <ul class="navbar__list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="equipo.html">Equipo</a></li>
+                    <li><a href="historia.html">Historia</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contactenos.html">Contáctenos</a></li>
+                </ul>
+                  <span class="line"></span>
+            </nav>
+            
+        </header>
+        <main class="presentacion__abogados">
     
-        <div class="abogado" id="f2">
-            <img src="https://img.freepik.com/foto-gratis/empresaria-sonriente-posando-al-aire-libre-brazos-cruzados-copie-espacio_23-2148767055.jpg?w=740&t=st=1721351385~exp=1721351985~hmac=588f1b5a50fcb887b24f38294764f96a6a943347df27c3382bc7b6d75d31e841" alt="Abogado 2">
-            <h3>Abg. Daniela Jaramillo</h3>
-            <p>Experto en litigios y resolución de conflictos. Ha representado a clientes en numerosos casos de alta complejidad.</p>
-        </div>
-
-        <div class="abogado" id="f3">
-            <img src="https://img.freepik.com/foto-gratis/empresaria-confiada-sonriente-que-presenta-brazos-cruzados_1262-20950.jpg?w=740&t=st=1721351320~exp=1721351920~hmac=2a27796a5ed4e2e6316bd96568c88263cd1c4b6dfdeef22bb7ec6b15dacd1460" alt="Abogado 2">
-            <h3>Abg. Maissa Jaramillo</h3>
-            <p>Especializada en litigios, contratos y derecho corporativo, Maissa se destaca por su enfoque meticuloso y compromiso en la defensa de los intereses de sus clientes, garantizando soluciones efectivas y personalizadas para cada caso..</p>
-        </div>
-
-        <div class="abogado" id="f4">
-            <img src="imagenes/abogado3.jpg" alt="Abogado 3">
-            <h3>Abg. Andrea Hidalgo</h3>
-            <p>Asesor en derecho laboral y recursos humanos. Con una amplia trayectoria en la implementación de políticas laborales eficaces.</p>
-        </div>
-
-        <div class="abogado" id="f5">
-            <img src="imagenes/abogado4.jpg" alt="Abogado 4">
-            <h3>Abg. Domenica Balarezo</h3>
-            <p>Especialista en derecho penal y criminal. Ha defendido con éxito a clientes en casos de gran relevancia mediática.</p>
-        </div>
-
-        <div class="abogado" id="f6">
-            <img src="imagenes/abogado5.jpeg" alt="Abogado 3">
-            <h3>Fernando Sanchez</h3>
-            <p>Especialista en datos, análisis y soluciones estratégicas para decisiones informadas.</p>
-        </div>
-
-        <div class="abogado" id="f7">
-            <img src="imagenes/abogado6.jpeg" alt="Abogado 4">
-            <h3>Miguel Calvopiña</h3>
-            <p>Experto en economía, mercados y políticas para optimizar recursos financieros.</p>
-        </div>
-       
+            
+            <div class="abogado" id="f1">
+                <img src="imagenes/abogado1.jpg" alt="Abogado 1">
+                <h3>Dr. Diego Jaramillo</h3>
+                <p>Especialista en derecho corporativo y comercial. Con más de 10 años de experiencia asesorando a empresas nacionales e internacionales.</p>
+            </div>
         
-    </section>
-    <footer>
-        <p>&copy; 2024 Atheneum Jaramillo Guarderas & Asociados</p>
-    </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const abogadosSection = document.querySelector('#abogados');
-
-            window.addEventListener('scroll', function() {
-                const sectionPosition = abogadosSection.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.2;
-
-                if (sectionPosition < screenPosition) {
-                    abogadosSection.classList.add('active');
-                }
-            });
-        });
-        document.getElementById('icono__menu').addEventListener('click', function() {
-            document.querySelector('.nav-list').classList.toggle('hidden');
-        });
-        const iconoMenu = document.getElementById('icono__menu');
-        const originalSrc = './imagenes/burger-menu.svg';
-        const nuevaSrc = './imagenes/close.svg';
-
-        let isOpen = false;
-        iconoMenu.addEventListener('click', function() {
-            isOpen = !isOpen;
-
-            if (isOpen) {
-                iconoMenu.src = nuevaSrc;
-            } else {
-                iconoMenu.src = originalSrc;
-            }
-
-        });
-    </script>
+            <div class="abogado" id="f2">
+                <img src="https://img.freepik.com/foto-gratis/empresaria-sonriente-posando-al-aire-libre-brazos-cruzados-copie-espacio_23-2148767055.jpg?w=740&t=st=1721351385~exp=1721351985~hmac=588f1b5a50fcb887b24f38294764f96a6a943347df27c3382bc7b6d75d31e841" alt="Abogado 2">
+                <h3>Abg. Daniela Jaramillo</h3>
+                <p>Experto en litigios y resolución de conflictos. Ha representado a clientes en numerosos casos de alta complejidad.</p>
+            </div>
+    
+            <div class="abogado" id="f3">
+                <img src="https://img.freepik.com/foto-gratis/empresaria-confiada-sonriente-que-presenta-brazos-cruzados_1262-20950.jpg?w=740&t=st=1721351320~exp=1721351920~hmac=2a27796a5ed4e2e6316bd96568c88263cd1c4b6dfdeef22bb7ec6b15dacd1460" alt="Abogado 2">
+                <h3>Abg. Maissa Jaramillo</h3>
+                <p>Especializada en litigios, contratos y derecho corporativo, Maissa se destaca por su enfoque meticuloso y compromiso en la defensa de los intereses de sus clientes, garantizando soluciones efectivas y personalizadas para cada caso..</p>
+            </div>
+    
+            <div class="abogado" id="f4">
+                <img src="imagenes/abogado3.jpg" alt="Abogado 3">
+                <h3>Abg. Andrea Hidalgo</h3>
+                <p>Asesor en derecho laboral y recursos humanos. Con una amplia trayectoria en la implementación de políticas laborales eficaces.</p>
+            </div>
+    
+            <div class="abogado" id="f5">
+                <img src="imagenes/abogado4.jpg" alt="Abogado 4">
+                <h3>Abg. Doménica Balarezo</h3>
+                <p>Especialista en derecho penal y criminal. Ha defendido con éxito a clientes en casos de gran relevancia mediática.</p>
+            </div>
+    
+            <div class="abogado" id="f6">
+                <img src="imagenes/abogado5.jpeg" alt="Abogado 3">
+                <h3>Fernando Sanchez</h3>
+                <p>Especialista en datos, análisis y soluciones estratégicas para decisiones informadas.</p>
+            </div>
+    
+            <div class="abogado" id="f7">
+                <img src="imagenes/abogado6.jpeg" alt="Abogado 4">
+                <h3>Miguel Calvopiña</h3>
+                <p>Experto en economía, mercados y políticas para optimizar recursos financieros.</p>
+            </div>  
+        </main>
+        
+        <!--pie de pagina-->
+        <footer class="footerbar">
+            <p>&copy; 2024 Atheneum Jaramillo Guarderas & Asociados</p>
+        </footer>
+    </div>
+    
+    <script src="/assets/js/menu.js"></script>
 </body>
 </html>

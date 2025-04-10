@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icono de la pagina -->
+    <link rel="icon" href="/imagenes/balanza.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fontmfamil -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <!-- estilos propios -->
+    <link rel="stylesheet" href="./assets/css/historia.css">
     <title>Historia - Atheneum Jaramillo Guarderas & Asociados</title>
-    <style>
-        :root{
+    <!-- <style>
+        :root {
             --primary-color: #3F4346;
             --secondary-color: #003366;
             --header-height: 100px;
             --header-heigth-movile: 50px;
         }
-        *{
+
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             background-image: url(./imagenes/bodegon-balanza-justicia.jpg);
             background-repeat: no-repeat;
@@ -27,8 +41,9 @@
             background-color: #f4f4f4;
             color: #333;
         }
+
         header {
-            
+
             height: 100px;
             display: flex;
             flex-direction: row;
@@ -39,26 +54,30 @@
             text-align: center;
             align-items: center;
         }
-        nav{
+
+        nav {
             padding-right: 10rem;
             width: 100%;
         }
+
         nav ul {
             list-style: none;
             padding: 0;
         }
+
         nav ul li {
             display: inline;
             margin: 0 1em;
         }
+
         nav ul li a {
             color: white;
             text-decoration: none;
             font-size: 18px;
         }
-        
+
         footer {
-            
+
             position: sticky;
             top: 100%;
             background-color: var(--primary-color);
@@ -66,8 +85,8 @@
             text-align: center;
             padding: 1em 0;
         }
-        
-        #historia{
+
+        #historia {
             padding: 2rem;
             background-color: #fff;
             border-radius: 10px;
@@ -75,14 +94,16 @@
             margin: 13vh auto;
             max-width: 800px;
         }
-        .logo{
+
+        .logo {
             margin-left: 10rem;
             padding: 1rem;
             height: 125px;
             width: 200px;
         }
+
         /*animaciones 2*/
-        h2{
+        h2 {
             color: #333;
             transition: color 0.3s ease;
             opacity: 0;
@@ -96,7 +117,7 @@
             text-align: center;
             transition: color 0.3s ease;
         }
-        
+
         h2.animated-title:hover {
             color: #007BFF;
         }
@@ -122,18 +143,21 @@
                 transform: translateY(0);
             }
         }
+
         @keyframes fadeIn {
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
         @media (max-width: 815px) {
             .header {
                 height: var(--header-heigth-movile);
                 display: flex;
                 flex-direction: row-reverse;
             }
+
             .nav {
                 padding: 0;
                 width: 100%;
@@ -142,60 +166,74 @@
                 top: 50px;
                 z-index: 1;
             }
+
             .nav-list {
                 display: none;
             }
+
             .nav-list li {
                 height: 50px;
             }
+
             .nav-list li a {
                 font-family: sans-serif;
             }
+
             .nav-list.hidden {
                 display: flex;
                 flex-direction: column;
-                
+
             }
+
             .icono__menu {
                 margin: 0 1rem;
             }
+
             .logo {
                 display: none;
             }
         }
-        @media (min-width: 816px) and (max-width: 1000px){
+
+        @media (min-width: 816px) and (max-width: 1000px) {
             .header {
                 display: flex;
                 flex-direction: row;
             }
+
             .logo {
                 margin: 0;
                 padding: 0;
                 width: auto;
                 height: 100px;
             }
+
             .icono__menu {
                 display: none;
             }
+
             .nav {
                 margin: 0;
                 padding: 0;
             }
+
             .nav-list li a {
                 font-family: sans-serif;
                 font-size: 12px;
             }
         }
+
         @media (min-width: 1000px) {
             .icono__menu {
                 display: none;
             }
         }
+
         @media (min-width: 3000px) {
-            
+
             .icono__menu {
                 display: none;
             }
+
             #historia {
                 max-width: 2000px;
                 max-height: 3000px;
@@ -206,65 +244,69 @@
                 margin: 2vw 6vw;
                 padding: 5rem;
             }
+
             #historia h2 {
                 font-size: 4vw;
             }
+
             #historia p {
                 font-size: 1.7vw;
             }
-            
+
         }
-    </style>
+    </style> -->
 </head>
+
 <body>
-    <header class="header">
-        <img class="logo" src="./imagenes/logo final.png" alt="">
-        <img class="icono__menu" id="icono__menu" src="./imagenes/burger-menu.svg" alt="">
-        <nav class="nav">
-            <ul class="nav-list">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-                <li><a href="equipo.html">Equipo</a></li>
-                <li><a href="historia.html">Historia</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contactenos.html">Contáctenos</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="historia">
-        
-        <h2 class="animated-title">ATHENEUM - HISTORIA</h2>
-        <p>Es la escuela de formación filosófica fundada por el gran filósofo Aristocles (Platón). Quien hizo de este lugar de reunión un templo del saber, al que acudieron los más grandes pensadores de la época para llevar los conocimientos adquiridos en el ATHENEUM a sus tierras natales para conseguir una sociedad culta, libre de violencia y abierta al diálogo.</p>
-        <p>Con estos principios el Doctor Diego Jaramillo decide aperturar el 1 de Julio del 2004 un Estudio Jurídico donde prima la calidad de los servicios con apego a la ética y la moral, dando la oportunidad a sus estudiantes para realizar prácticas profesionales y posteriormente incorporarlos al ATHENEUM en calidad de Abogados Asociados.</p>
-        <p>Es importante informar a nuestros clientes que el ideal del Estudio Jurídico también es formar profesionales de alta calidad, por ello quienes han transitado en ATHENEUM actualmente son abogados exitosos.</p>
-        <p>Los abogados que conforman actualmente el ATHENEUM conocen los valores con los que se fundó el Estudio Jurídico lo que garantiza a nuestros clientes un servicio de calidad.</p>
-        
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 Atheneum Jaramillo Guarderas & Asociados</p>
-    </footer>
+    <div class="envoltorio__principal">
+        <header class="header__principal">
+            <img class="header__principal--logo" src="./imagenes/logoIndex.png" alt="Oficina de abogados">
+            <button id="menu-toggle" class="btn__menu"><i class="fa-solid fa-bars"></i></button>
+            <nav id="navbar" class="navbar">
+                <span class="line"></span>
+                <ul class="navbar__list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="equipo.html">Equipo</a></li>
+                    <li><a href="historia.html">Historia</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contactenos.html">Contáctenos</a></li>
+                </ul>
+                <span class="line"></span>
+            </nav>
 
-<script>
-    document.getElementById('icono__menu').addEventListener('click', function() {
-            document.querySelector('.nav-list').classList.toggle('hidden');
-        });
-        const iconoMenu = document.getElementById('icono__menu');
-        const originalSrc = './imagenes/burger-menu.svg';
-        const nuevaSrc = './imagenes/close.svg';
+        </header>
 
-        let isOpen = false;
+        <main class="presentacion__historia">
 
-        iconoMenu.addEventListener('click', function() {
-            isOpen = !isOpen;
+            <h1>ATHENEUM - HISTORIA</h1>
+            <p class="p1">Es la escuela de formación filosófica fundada por el gran filósofo Aristocles (Platón). Quien
+                hizo de
+                este lugar de reunión un templo del saber, al que acudieron los más grandes pensadores de la época para
+                llevar los conocimientos adquiridos en el ATHENEUM a sus tierras natales para conseguir una sociedad
+                culta, libre de violencia y abierta al diálogo.</p>
+            <p class="p2">Con estos principios el Doctor Diego Jaramillo decide aperturar el 1 de Julio del 2004 un
+                Estudio
+                Jurídico donde prima la calidad de los servicios con apego a la ética y la moral, dando la oportunidad a
+                sus estudiantes para realizar prácticas profesionales y posteriormente incorporarlos al ATHENEUM en
+                calidad de Abogados Asociados.</p>
+            <p class="p3">Es importante informar a nuestros clientes que el ideal del Estudio Jurídico también es formar
+                profesionales de alta calidad, por ello quienes han transitado en ATHENEUM actualmente son abogados
+                exitosos.</p>
+            <p class="p4">Los abogados que conforman actualmente el ATHENEUM conocen los valores con los que se fundó el
+                Estudio
+                Jurídico lo que garantiza a nuestros clientes un servicio de calidad.</p>
 
-            if (isOpen) {
-                iconoMenu.src = nuevaSrc;
-            } else {
-                iconoMenu.src = originalSrc;
-            }
+        </main>
 
-        });
-</script>
+        <footer class="footerbar">
+            <p>&copy; 2024 Atheneum Jaramillo Guarderas & Asociados</p>
+        </footer>
+        <script src="/assets/js/menu.js"></script>
+    </div>
+
+
+
 </body>
+
 </html>
