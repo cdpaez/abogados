@@ -30,4 +30,4 @@ const carrusel = document.querySelector('.carrusel-items');
   // Opcional: cambio automático cada 5 segundos 🕒
   setInterval(() => {
     btnNext.click();
-  }, 5000);
+  }, 30000);
