@@ -374,8 +374,9 @@ span {
 
   .presentacion__historia {
     flex: 1;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   .presentacion__historia h1 {
@@ -422,13 +423,14 @@ span {
     opacity: 0;
     transform: translateX(-200px);
     animation: slideIn 0.8s ease-out forwards;
+    padding: 0em 1em;
   }
 
   .p2,
   .p4 {
     text-align: center;
     margin: 1em 0;
-    padding: 0;
+    padding: 0em 1em;
     line-height: 2em;
     letter-spacing: 0.2em;
     font-family: 'Merriweather', serif;
