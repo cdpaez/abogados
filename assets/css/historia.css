@@ -412,7 +412,7 @@ span {
 
   .p1,
   .p3 {
-    text-align: center;
+    text-align: justify;
     padding: 0;
     line-height: 2em;
     letter-spacing: 0.2em;
@@ -428,7 +428,7 @@ span {
 
   .p2,
   .p4 {
-    text-align: center;
+    text-align: justify;
     margin: 1em 0;
     padding: 0em 1em;
     line-height: 2em;

@@ -400,7 +400,7 @@ span {
     }
 
     .section__inicio--pizq {
-        width: 50%;
+        width: 100%;
         text-align: center;
         line-height: 2em;
         letter-spacing: 0.2em;
@@ -409,7 +409,7 @@ span {
     }
 
     .section__inicio--pder {
-        width: 50%;
+        width: 100%;
         text-align: center;
         margin: 0;
         padding: 0;
