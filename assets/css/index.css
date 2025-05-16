@@ -207,6 +207,7 @@ span {
 }
 
 .presentacion__izq {
+    height: 500px;
     text-align: center;
     margin: 1em 0;
     padding: 0em 2em;
@@ -257,8 +258,8 @@ span {
     font-weight: 700;
 
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-
-    color: #333;
+    background-color: #333;
+    color: #fff;
     text-align: center;
     padding: 0em 0.2em;
     margin: 0;
@@ -291,7 +292,7 @@ span {
     line-height: 2em;
     letter-spacing: 0.2em;
     font-family: 'Merriweather', serif;
-    font-size: 0.7em;
+    font-size: 1.5em;
 
     color: #333;
     opacity: 0;
