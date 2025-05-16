@@ -28,6 +28,7 @@ span {
     flex-direction: column;
 }
 
+/* bloque encargado de dar estilos al header */
 .header__principal {
     width: 100%;
     background-color: var(--primary-color);
@@ -143,50 +144,13 @@ span {
     color: #fff;
 }
 
-.section__inicio {
+/* bloque encargado de dar estilos al contenido principal */
+.main__container {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.section__inicio img {
-    width: 100%;
-    max-width: 300px;
-    margin: 2em 0 0 0;
-    animation: fadeIn 0.6s ease-out;
-}
-
-/* 
-.section__inicio h1 {
-    font-size: 2.7em;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    color: #333;
-    text-align: center;
-    margin: 0;
-    line-height: 2em;
-    width: 100%;
-    letter-spacing: 0.2em;
-    font-family: 'Playfair Display', serif;
-    margin-top: 1em;
-} */
-
-.section__inicio h2 {
-
-    font-size: 1em;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    color: #333;
-    text-align: center;
-    line-height: 2em;
-    width: 100%;
-    letter-spacing: 0.2em;
-    font-family: 'Playfair Display', serif;
-    animation: fadeIn 0.6s ease-out;
-    padding: 0em 1em;
-    margin-bottom: 1em;
 }
 
 @keyframes fadeIn {
@@ -201,29 +165,75 @@ span {
     }
 }
 
-.section__inicio--pizq {
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.presentacion img {
+    width: 100%;
+    max-width: 350px;
+    margin: 2em 0 0 0;
+    animation: fadeIn 0.6s ease-out;
+}
+
+
+.presentacion h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    color: #333;
+    text-align: center;
+    margin: 0;
+    line-height: 2em;
+    width: 100%;
+    letter-spacing: 0.2em;
+    font-family: 'Playfair Display', serif;
+    animation: swirl-in-bck 0.65s ease-out both;
+}
+
+@keyframes swirl-in-bck {
+    0% {
+        transform: rotate(540deg) scale(5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.presentacion__izq {
     text-align: center;
     margin: 1em 0;
     padding: 0em 2em;
     line-height: 2em;
-    letter-spacing: 0.2em;
+    letter-spacing: 0em;
     font-family: 'Merriweather', serif;
-    font-size: 1em;
-
-    color: #333;
+    font-size: 1.5em;
+    background: url(/imagenes/index/juzgado.jpg) no-repeat right center / cover;
+    color: #f6f6f7;
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
     opacity: 0;
     transform: translateX(-200px);
     animation: slideIn 0.8s ease-out forwards;
 }
 
-.section__inicio--pder {
+.presentacion__der {
     text-align: center;
     margin: 1em 0;
     padding: 0em 2em;
     line-height: 2em;
     letter-spacing: 0.2em;
     font-family: 'Merriweather', serif;
-    font-size: 1em;
+    font-size: 1.5em;
     color: #333;
     opacity: 0;
     transform: translateX(200px);
@@ -237,6 +247,84 @@ span {
     }
 }
 
+/* contenido principal del sitio */
+.quienes__somos {
+    flex: 1;
+}
+
+.quienes__somos h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+    color: #333;
+    text-align: center;
+    padding: 0em 0.2em;
+    margin: 0;
+    line-height: 2em;
+    width: 100%;
+    letter-spacing: 0.2em;
+    /* font-family: 'Merriweather', serif; */
+    font-family: 'Playfair Display', serif;
+
+    animation: fadeIn 0.6s ease-out;
+    margin-top: 1em;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quienes__somos--pizq {
+    text-align: center;
+    margin: 1em 0;
+    padding: 2em;
+    line-height: 2em;
+    letter-spacing: 0.2em;
+    font-family: 'Merriweather', serif;
+    font-size: 0.7em;
+
+    color: #333;
+    opacity: 0;
+    transform: translateX(-200px);
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+.quienes__somos--pder {
+    text-align: center;
+    margin: 1em 0;
+    padding: 2em;
+    line-height: 2em;
+    letter-spacing: 0.2em;
+    font-family: 'Merriweather', serif;
+    font-size: 1em;
+    color: #333;
+    opacity: 0;
+    transform: translateX(200px);
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+.quienes__somos--banner {
+    width: 100%;
+    padding: 2em;
+
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 .footerbar {
     text-align: center;
@@ -287,6 +375,30 @@ span {
     .section__inicio--pder {
         font-size: 1.3em;
     }
+
+    .quienes__somos {
+        flex: 1;
+        /* clave para que crezca */
+        padding: 0;
+        margin: 0;
+    }
+
+    .quienes__somos h1 {
+        font-size: 3em;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .quienes__somos--pizq {
+        font-size: 1.3em;
+    }
+
+    .quienes__somos--pder {
+        font-size: 1.3em;
+    }
+
+
 
 
 }
@@ -435,6 +547,54 @@ span {
         line-height: 2em;
         letter-spacing: 0.2em;
         font-size: 1.2em;
+    }
+
+    .quienes__somos {
+        /* clave para que crezca */
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+
+    .quienes__somos--info {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 2em;
+    }
+
+    /* estilos para el contenido  */
+    .quienes__somos h1 {
+        font-size: 3em;
+        padding: 0;
+        margin: 0;
+    }
+
+    .quienes__somos--pizq {
+        text-align: center;
+        line-height: 2em;
+        letter-spacing: 0.2em;
+        font-size: 1em;
+
+    }
+
+    .quienes__somos--pder {
+        text-align: center;
+        line-height: 2em;
+        letter-spacing: 0.2em;
+        font-size: 1em;
+    }
+
+    .quienes__somos--banner {
+        width: 100%;
+
     }
 
     .footerbar {
