@@ -17,7 +17,7 @@ body {
   height: 100%;
 }
 
-span {
+.line {
   display: none;
 }
 
@@ -214,11 +214,63 @@ span {
 }
 
 .footerbar {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   color: whitesmoke;
   background-color: var(--primary-color);
   font-family: 'Merriweather', serif;
   padding: 1em;
+}
+
+.container1,
+.container2,
+.container3,
+.container4 {
+  padding: 1em;
+}
+
+/* Distribución en la grid */
+.container1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.container1 img {
+  width: 100%;
+  height: auto;
+  filter: invert(1);
+}
+
+.container2 {
+  text-align: left;
+  gap: 1em;
+  border-left: 3px solid wheat;
+}
+
+.fa-solid {
+  margin-right: 10px;
+}
+
+.container2 ul {
+  margin: 0.5em 0em;
+}
+
+.container2 li {
+  list-style: none;
+}
+
+
+.container3 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.container4 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  text-align: center;
+  font-size: 2em;
 }
 
 /* ===== TABLET: 481px a 1024px ===== */
@@ -299,7 +351,7 @@ span {
     margin: 0;
   }
 
-  span {
+  .line {
     display: flex;
     border-bottom: 2px solid whitesmoke;
     border-top: 2px solid whitesmoke;
@@ -315,7 +367,7 @@ span {
     flex-direction: column;
   }
 
-  
+
 
 
   /* estilos para el header */
@@ -380,7 +432,7 @@ span {
     color: var(--primary-color);
   }
 
-  
+
   /* estilos para el contenido  */
   .presentacion__abogados {
     /* clave para que crezca */
@@ -396,7 +448,7 @@ span {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    
+
   }
 
 
@@ -439,6 +491,7 @@ span {
     grid-area: f5;
 
   }
+
   .abogado {
     width: 100%;
     height: 100%;
@@ -456,7 +509,8 @@ span {
 
 
   }
-  .abogado:hover{
+
+  .abogado:hover {
     background-color: #e2e6ea;
   }
 
@@ -480,7 +534,7 @@ span {
   }
 
   .abogado p {
-    
+
     font-size: 1.5em;
     padding: 0em 5em;
     font-family: 'Merriweather', serif;
@@ -488,11 +542,64 @@ span {
   }
 
   .footerbar {
+    height: 100%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 columnas iguales */
+    grid-template-rows: 80% 20%;
+    /* 80% primera fila, 20% segunda fila */
     width: 100%;
-    padding: 2em;
+    /* Ajusta según necesidad */
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    gap: 1em;
   }
 
-  .footerbar p {
-    font-size: 1.5em;
+  .container1,
+  .container2,
+  .container3,
+  .container4 {
+    padding: 1em;
+  }
+
+  /* Distribución en la grid */
+  .container1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .container1 img {
+    width: 40%;
+    height: auto;
+    filter: invert(1);
+  }
+
+  .container2 {
+    text-align: left;
+    gap: 1em;
+    border-left: 3px solid wheat;
+  }
+
+  .container2 ul {
+    margin: 0.5em 0em;
+  }
+
+  .container2 li {
+    list-style: none;
+  }
+
+
+  .container3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .container4 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    text-align: right;
+    font-size: 16px;
   }
 }
