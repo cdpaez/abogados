@@ -207,9 +207,11 @@ body {
     letter-spacing: 0em;
     font-family: 'Playfair Display', serif;
 }
+
 .animate__swirl {
     animation: swirl-in-bck 1s ease-out both;
 }
+
 @keyframes swirl-in-bck {
     0% {
         transform: rotate(540deg) scale(5);
@@ -259,6 +261,13 @@ body {
     transform: translateX(-200px);
 }
 
+.presentacion__izq--resaltado {
+    background-color: #333;
+    padding: 0.1em 0.2em;
+    border-radius: 0.2em;
+    box-decoration-break: clone;
+}
+
 .presentacion__der {
     text-align: center;
     padding: 0em 2em;
@@ -305,8 +314,9 @@ body {
     color: #333;
     opacity: 0;
     transform: translateX(-200px);
-    
+
 }
+
 .slideIn {
     animation: slideIn 0.8s ease-out forwards;
 }
