@@ -28,7 +28,11 @@ body {
     flex-direction: column;
 }
 
-/* bloque encargado de dar estilos al header */
+/*  
+    bloque encargado de dar estilos al header
+    y al menu para navegar entre pestanas
+*/
+
 .header__principal {
     width: 100%;
     background-color: var(--primary-color);
@@ -70,18 +74,24 @@ body {
     z-index: 9;
 }
 
-/* ANIMACIÓN DE ENTRADA */
+/* 
+    animacion para ver el menu en dispositivos moviles
+*/
+
 .navbar.show {
     opacity: 1;
     pointer-events: auto;
-    animation: scale-up-top 0.4s forwards;
+    animation: scale-up-top 0.2s forwards;
 }
 
-/* ANIMACIÓN DE SALIDA */
+/* 
+    animacion para cerrar el menu en dispositivos moviles
+*/
+
 .navbar.hide {
     opacity: 1;
     pointer-events: none;
-    animation: scale-up-bottom 0.4s forwards;
+    animation: scale-up-bottom 0.2s forwards;
 }
 
 @keyframes scale-up-top {
@@ -144,13 +154,30 @@ body {
     color: #fff;
 }
 
-/* bloque encargado de dar estilos al contenido principal */
+/* 
+    bloque encargado de estilar el contenido principal 
+*/
+
 .main__container {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.presentacion img {
+    width: 100%;
+    max-width: 300px;
+    margin: 2em 0 0 0;
+    animation: fadeIn 0.6s ease-out;
 }
 
 @keyframes fadeIn {
@@ -165,21 +192,6 @@ body {
     }
 }
 
-.presentacion {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.presentacion img {
-    width: 100%;
-    max-width: 350px;
-    margin: 2em 0 0 0;
-    animation: fadeIn 0.6s ease-out;
-}
-
-
 .presentacion h1 {
     font-size: 1.5em;
     font-weight: 700;
@@ -187,9 +199,9 @@ body {
     color: #333;
     text-align: center;
     margin: 0;
-    line-height: 2em;
+    line-height: 1.5em;
     width: 100%;
-    letter-spacing: 0.2em;
+    letter-spacing: 0em;
     font-family: 'Playfair Display', serif;
     animation: swirl-in-bck 0.65s ease-out both;
 }
@@ -205,7 +217,13 @@ body {
         opacity: 1;
     }
 }
-
+.presentacion__introduccion {
+    text-align: justify;
+    font-size: 1.5em;
+    padding: 2em;
+    letter-spacing: 0;
+    font-family: 'Playfair Display', serif;
+}
 .div__izq {
     background: url(/imagenes/index/juzgado.jpg) no-repeat right center / cover;
     margin: 4rem 0em;
@@ -340,12 +358,59 @@ body {
 }
 
 .footerbar {
-    
+    display: flex;
+    flex-direction: column;
     text-align: center;
     color: whitesmoke;
     background-color: var(--primary-color);
     font-family: 'Merriweather', serif;
     padding: 1em;
+}
+
+.container1,
+.container2,
+.container3,
+.container4 {
+    padding: 1em;
+}
+
+/* Distribución en la grid */
+.container1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.container1 img {
+    width: 100%;
+    height: auto;
+    filter: invert(1);
+}
+
+.container2 {
+    text-align: left;
+    gap: 1em;
+    border-left: 3px solid wheat;
+}
+
+.container2 ul {
+    margin: 0.5em 0em;
+}
+
+.container2 li {
+    list-style: none;
+}
+
+
+.container3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.container4 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    text-align: center;
+    font-size: 2em;
 }
 
 /* ===== TABLET: 481px a 1024px ===== */
@@ -646,7 +711,7 @@ body {
 
     .footerbar {
         height: 100%;
-        height: 450px;
+        height: 300px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         /* 2 columnas iguales */
@@ -672,19 +737,23 @@ body {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
     }
+
     .container1 img {
         width: 40%;
         height: auto;
         filter: invert(1);
     }
+
     .container2 {
         text-align: left;
         gap: 1em;
         border-left: 3px solid wheat;
     }
+
     .container2 ul {
         margin: 0.5em 0em;
     }
+
     .container2 li {
         list-style: none;
     }
@@ -699,8 +768,7 @@ body {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
         text-align: right;
-        font-size: 2em;
+        font-size: 16px;
     }
 
-    
 }
