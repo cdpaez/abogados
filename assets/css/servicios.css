@@ -150,30 +150,29 @@ body {
 }
 
 .presentacion__historia h1 {
-  font-size: 1.5em;
+  font-size: clamp(0.5rem, 2vw + 1rem, 3rem);
   font-weight: 700;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   color: #333;
   text-align: center;
   line-height: 2em;
   width: 100%;
-  letter-spacing: 0.2em;
   font-family: 'Playfair Display', serif;
   animation: fadeIn 0.6s ease-out;
   margin: 1em 0em;
 }
 
 .p1 {
-  text-align: justify;
+  text-align: left;
   line-height: 3em;
-  letter-spacing: 0.1em;
+  word-spacing: 0;
   font-family: 'Merriweather', serif;
   font-size: 0.8em;
   color: #333;
   opacity: 0;
   transform: translateX(-200px);
   animation: slideIn 0.8s ease-out forwards;
-  padding: 0em 5em;
+  padding: 0em 2em;
   margin: 1em 0em;
 
 }
@@ -469,43 +468,17 @@ body {
   .justicia {
     height: 100%;
     width: 100%;
+    padding: 8rem 0rem;
   }
 
   .platon__texto,
   .dr__jaramillo__texto,
   .profesionales__texto,
   .justicia__texto {
+    height: 100%;
+    width: 100%;
     display: block;
     position: relative;
-  }
-
-  .platon__texto,
-  .dr__jaramillo__texto,
-  .profesionales__texto,
-  .justicia__texto p {
-    font-size: 1.25rem;
-  }
-
-  .izq {
-    position: absolute;
-    text-align: right;
-    bottom: -200px;
-    right: 10px;
-    width: 75%;
-    line-height: 1rem;
-    background-color: rgb(192, 185, 185);
-    padding: 0;
-  }
-
-  .der {
-    position: absolute;
-    text-align: left;
-    top: -200px;
-    left: -100px;
-    width: 75%;
-    line-height: 2rem;
-    background-color: rgb(192, 185, 185);
-    padding: 0;
   }
 
   #parrafo__1,
@@ -572,10 +545,85 @@ body {
 
   .p1 {
     animation: none;
+    font-size: 1.2rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #212529;
+    line-height: 1.6;
+
   }
 
-  .p1.texto-animado {
-    animation: slideInLeft 0.8s ease-out forwards;
+  .primeroA.texto-animado1 {
+    animation: slideInLeft 1s ease-out forwards;
+    position: absolute;
+    top: 25%;
+    left: 0px;
+    width: 75%;
+    text-align: left;
+    background-color: rgb(192, 185, 185);
+  }
+
+  .segundoA.texto-animado2 {
+    animation: slideInLeft 2s ease-out forwards;
+    position: absolute;
+    bottom: 23%;
+    right: 100px;
+    width: 75%;
+    text-align: right;
+    background-color: rgb(192, 185, 185);
+  }
+
+  .primeroB.texto-animado1 {
+    animation: slideInLeft 1s ease-out forwards;
+    position: absolute;
+    top: 22%;
+    right: 100px;
+    width: 75%;
+    text-align: left;
+    background-color: rgb(192, 185, 185);
+  }
+
+  .segundoB.texto-animado2 {
+    animation: slideInLeft 2s ease-out forwards;
+    position: absolute;
+    bottom: 22%;
+    left: 0px;
+    width: 75%;
+    text-align: right;
+    background-color: rgb(192, 185, 185);
+  }
+
+  .primeroC.texto-animado1 {
+    animation: slideInLeft 1s ease-out forwards;
+    position: absolute;
+    top: 28%;
+    left: 0px;
+    width: 75%;
+    text-align: left;
+    background-color: rgb(192, 185, 185);
+  }
+
+  .segundoC.texto-animado2 {
+    animation: slideInLeft 2s ease-out forwards;
+    position: absolute;
+    bottom: 28%;
+    right: 100px;
+    width: 75%;
+    text-align: right;
+    background-color: rgb(192, 185, 185);
+  }
+
+  .primeroD.texto-animado1 {
+    animation: slideInLeft 2s ease-out forwards;
+    position: absolute;
+    top: 20%;
+    left: 0px;
+    width: 75%;
+    text-align: right;
+    background-color: rgb(192, 185, 185);
   }
 
   @keyframes slideInLeft {

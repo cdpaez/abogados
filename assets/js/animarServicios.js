@@ -32,9 +32,25 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const parrafos = entry.target.querySelectorAll(".p1");
-        parrafos.forEach(p => p.classList.add("texto-animado"));
 
-        // Dejar de observar para que no se vuelva a activar
+        parrafos.forEach(p => {
+          if (p.classList.contains("primeroA")) {
+            p.classList.add("texto-animado1");
+          } else if (p.classList.contains("segundoA")) {
+            p.classList.add("texto-animado2");
+          }else if (p.classList.contains("primeroB")) {
+            p.classList.add("texto-animado1");
+          }else if (p.classList.contains("segundoB")) {
+            p.classList.add("texto-animado2");
+          }else if (p.classList.contains("primeroC")) {
+            p.classList.add("texto-animado1");
+          }else if (p.classList.contains("segundoC")) {
+            p.classList.add("texto-animado2");
+          }else if (p.classList.contains("primeroD")) {
+            p.classList.add("texto-animado1");
+          }
+        });
+
         observer.unobserve(entry.target);
       }
     });
@@ -46,3 +62,4 @@ document.addEventListener("DOMContentLoaded", () => {
     if (seccion) observer.observe(seccion);
   });
 });
+
