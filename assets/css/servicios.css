@@ -476,13 +476,36 @@ body {
   .profesionales__texto,
   .justicia__texto {
     display: block;
+    position: relative;
   }
 
   .platon__texto,
   .dr__jaramillo__texto,
   .profesionales__texto,
   .justicia__texto p {
-    font-size: 1.5em;
+    font-size: 1.25rem;
+  }
+
+  .izq {
+    position: absolute;
+    text-align: right;
+    bottom: -200px;
+    right: 10px;
+    width: 75%;
+    line-height: 1rem;
+    background-color: rgb(192, 185, 185);
+    padding: 0;
+  }
+
+  .der {
+    position: absolute;
+    text-align: left;
+    top: -200px;
+    left: -100px;
+    width: 75%;
+    line-height: 2rem;
+    background-color: rgb(192, 185, 185);
+    padding: 0;
   }
 
   #parrafo__1,

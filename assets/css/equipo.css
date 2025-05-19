@@ -451,6 +451,7 @@ body {
     padding: 0;
 
   }
+ 
 
 
   #f1 {
@@ -459,6 +460,10 @@ body {
     align-items: center;
     grid-area: f1;
 
+  }
+  .abogado__correo{
+    margin: 1rem 0rem;
+    font-size: 1.5rem;
   }
 
   #f2 {
@@ -524,7 +529,7 @@ body {
   }
 
   #f1 {
-    background: url(/imagenes/equipo/maestro.png) no-repeat center / cover;
+    background: url(/imagenes/equipo/maestrosinjusticia.png) no-repeat center / cover;
     width: 100%;
     color: #ccc;
   }
@@ -539,9 +544,21 @@ body {
   #f4,
   #f5,
   #f6 {
-    background: url(/imagenes/equipo/alummno.png) no-repeat center / cover;
-    color: white;
+    background-color: #252222;
+    color: #ccc;
   }
+  #f2 p,
+  #f3 p,
+  #f4 p,
+  #f5 p,
+  #f6 p {
+    font-size: 1rem;
+    letter-spacing: 0;
+    word-spacing: 0;
+    text-align: justify;
+    height: 100px;
+  }
+
   #f2 img,
   #f3 img,
   #f4 img,
@@ -565,12 +582,14 @@ body {
     font-size: 1.5em;
     padding: 0em 5em;
     font-family: 'Merriweather', serif;
-    line-height: 1.5em;
+    line-height: 1.25em;
     letter-spacing: 0;
-    text-align: center;
+    word-spacing: 0.75rem;
+    text-align: left;
   }
 
   .footerbar {
+    margin: 1rem 0 0 0;
     height: 100%;
     height: 300px;
     display: grid;
