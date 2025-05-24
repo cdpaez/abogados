@@ -48,6 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
             p.classList.add("texto-animado2");
           }else if (p.classList.contains("primeroD")) {
             p.classList.add("texto-animado1");
+          }else if (p.classList.contains("segundoD")) {
+            p.classList.add("texto-animado2");
           }
         });
 

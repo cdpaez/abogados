@@ -451,7 +451,7 @@ body {
     padding: 0;
 
   }
- 
+
 
 
   #f1 {
@@ -461,7 +461,8 @@ body {
     grid-area: f1;
 
   }
-  .abogado__correo{
+
+  .abogado__correo {
     margin: 1rem 0rem;
     font-size: 1.5rem;
   }
@@ -533,43 +534,54 @@ body {
     width: 100%;
     color: #ccc;
   }
+
   #f1 img {
     height: auto;
     width: 100%;
     max-width: 400px;
     object-fit: contain;
   }
+
   #f2,
   #f3,
   #f4,
   #f5,
-  #f6 {
+  #f6,
+  #f7 {
     background-color: #252222;
     color: #ccc;
   }
+
   #f2 p,
   #f3 p,
   #f4 p,
   #f5 p,
-  #f6 p {
-    font-size: 1rem;
+  #f6 p,
+  #f7 p {
+    font-size: 1.5rem;
     letter-spacing: 0;
     word-spacing: 0;
     text-align: justify;
-    height: 100px;
+    height: 250px;
   }
 
   #f2 img,
   #f3 img,
   #f4 img,
   #f5 img,
-  #f6 img {
+  #f6 img,
+  #f7 img {
     height: 270px;
     max-width: 370px;
   }
 
   .abogado img:hover {
     transform: scale(0.9);
+  }
+
+  .abogado h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
   }
 
   .abogado h3 {
@@ -591,7 +603,7 @@ body {
   .footerbar {
     margin: 1rem 0 0 0;
     height: 100%;
-    height: 300px;
+    height: 600px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* 2 columnas iguales */
@@ -628,6 +640,7 @@ body {
     text-align: left;
     gap: 1em;
     border-left: 3px solid wheat;
+    font-size: 1.5rem;
   }
 
   .container2 ul {
@@ -643,6 +656,9 @@ body {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
   }
+  .container3 p {
+        font-size: 1.5rem;
+    }
 
   .container4 {
     grid-column: 2 / 3;
