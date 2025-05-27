@@ -628,10 +628,14 @@ body {
   .container1 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .container1 img {
-    width: 40%;
+    width: 60%;
     height: auto;
     filter: invert(1);
   }
@@ -656,9 +660,10 @@ body {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
   }
+
   .container3 p {
-        font-size: 1.5rem;
-    }
+    font-size: 1.5rem;
+  }
 
   .container4 {
     grid-column: 2 / 3;
