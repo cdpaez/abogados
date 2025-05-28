@@ -297,12 +297,99 @@ body {
     /* ocupa toda la pantalla */
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+  .platon,
+  .dr__jaramillo,
+  .profesionales,
+  .justicia {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 50%;
+    height: 50%;
+    
+  }
+  .footerbar {
+        height: 100%;
+        height: 600px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* 2 columnas iguales */
+        grid-template-rows: 80% 20%;
+        /* 80% primera fila, 20% segunda fila */
+        width: 100%;
+        /* Ajusta según necesidad */
+        background-color: #333;
+        color: white;
+        padding: 1em;
+        gap: 1em;
+    }
+
+    .container1,
+    .container2,
+    .container3,
+    .container4 {
+        padding: 1em;
+    }
+
+    /* Distribución en la grid */
+    .container1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container1 img {
+        width: 60%;
+        height: auto;
+        filter: invert(1);
+    }
+
+    .container2 {
+        text-align: left;
+        gap: 1em;
+        border-left: 3px solid wheat;
+        font-size: 1.5rem;
+    }
+
+    .container2 ul {
+        margin: 0.5em 0em;
+    }
+
+    .container2 li {
+        list-style: none;
+    }
+
+
+    .container3 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .container3 p {
+        font-size: 1.5rem;
+    }
+
+    .container4 {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        text-align: right;
+        font-size: 16px;
+    }
 
 }
 
 /* ===== DESKTOP: 1025px en adelante ===== */
-@media (min-width: 1200px) {
+@media (min-width: 1366px) {
   * {
     margin: 0;
     padding: 0;
@@ -612,7 +699,7 @@ body {
     text-align: left;
     background-color: rgb(192, 185, 185);
 
-    font-size: clamp(13px, 1vw, 2rem);
+    font-size: clamp(13px, 1vw, 1.25rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -626,7 +713,7 @@ body {
     right: 50px;
     width: 75%;
     height: 25%;
-    text-align: right;
+    text-align: left;
     background-color: rgb(192, 185, 185);
 
     font-size: clamp(13px, 1vw, 2rem);
@@ -660,7 +747,7 @@ body {
     right: 50px;
     width: 75%;
     height: 25%;
-    text-align: right;
+    text-align: left;
     background-color: rgb(192, 185, 185);
 
     font-size: clamp(13px, 1vw, 2rem);
@@ -694,7 +781,7 @@ body {
     right: 50px;
     width: 75%;
     height: 25%;
-    text-align: right;
+    text-align: left;
     background-color: rgb(192, 185, 185);
 
     font-size: clamp(13px, 1vw, 2rem);

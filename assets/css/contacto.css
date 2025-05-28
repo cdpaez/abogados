@@ -245,7 +245,7 @@ body {
 }
 
 /* ===== DESKTOP: 1025px en adelante ===== */
-@media (min-width: 1025px) {
+@media (min-width: 1366px) {
   * {
     margin: 0;
     padding: 0;
