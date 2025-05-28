@@ -671,7 +671,7 @@ body {
   #f5 p,
   #f6 p,
   #f7 p {
-    font-size: 1.5rem;
+    font-size: clamp(18px, 1vw, 1.5rem);
     letter-spacing: 0;
     word-spacing: 0;
     text-align: justify;
@@ -699,7 +699,8 @@ body {
 
   .abogado h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 3em;
+    font-size: clamp(2rem, 1vw, 3rem);
+    width: 100%;
   }
 
   .abogado p {
@@ -711,6 +712,7 @@ body {
     letter-spacing: 0;
     word-spacing: 0.75rem;
     text-align: left;
+    width: 100%;
   }
 
   .footerbar {
