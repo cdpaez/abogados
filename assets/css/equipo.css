@@ -209,6 +209,7 @@ body {
   line-height: 35px;
   width: 90vw;
 }
+
 .abogado__correo {
   display: flex;
 }
@@ -309,17 +310,20 @@ body {
     padding: 0;
     margin: 0;
   }
+
   #f1 {
     background: url(/imagenes/equipo/maestrosinjusticia.png) no-repeat center / cover;
     width: 100%;
     color: #ccc;
   }
+
   #f1 img {
     height: auto;
     width: 100%;
     max-width: 400px;
     object-fit: contain;
   }
+
   #f2,
   #f3,
   #f4,
@@ -329,6 +333,7 @@ body {
     background-color: #252222;
     color: #ccc;
   }
+
   #f2 img,
   #f3 img,
   #f4 img,
@@ -338,6 +343,7 @@ body {
     height: 270px;
     max-width: 370px;
   }
+
   .abogado {
     display: flex;
     flex-direction: column;
@@ -376,81 +382,81 @@ body {
     line-height: 35px;
   }
 
-    .footerbar {
-        height: 100%;
-        height: 600px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        /* 2 columnas iguales */
-        grid-template-rows: 80% 20%;
-        /* 80% primera fila, 20% segunda fila */
-        width: 100%;
-        /* Ajusta según necesidad */
-        background-color: #333;
-        color: white;
-        padding: 1em;
-        gap: 1em;
-    }
+  .footerbar {
+    height: 100%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 columnas iguales */
+    grid-template-rows: 80% 20%;
+    /* 80% primera fila, 20% segunda fila */
+    width: 100%;
+    /* Ajusta según necesidad */
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    gap: 1em;
+  }
 
-    .container1,
-    .container2,
-    .container3,
-    .container4 {
-        padding: 1em;
-    }
+  .container1,
+  .container2,
+  .container3,
+  .container4 {
+    padding: 1em;
+  }
 
-    /* Distribución en la grid */
-    .container1 {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  /* Distribución en la grid */
+  .container1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .container1 img {
-        width: 60%;
-        height: auto;
-        filter: invert(1);
-    }
+  .container1 img {
+    width: 60%;
+    height: auto;
+    filter: invert(1);
+  }
 
-    .container2 {
-        text-align: left;
-        gap: 1em;
-        border-left: 3px solid wheat;
-        font-size: 1.5rem;
-    }
+  .container2 {
+    text-align: left;
+    gap: 1em;
+    border-left: 3px solid wheat;
+    font-size: 1.5rem;
+  }
 
-    .container2 ul {
-        margin: 0.5em 0em;
-    }
+  .container2 ul {
+    margin: 0.5em 0em;
+  }
 
-    .container2 li {
-        list-style: none;
-    }
+  .container2 li {
+    list-style: none;
+  }
 
 
-    .container3 {
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
-    }
+  .container3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
 
-    .container3 p {
-        font-size: 1.5rem;
-    }
+  .container3 p {
+    font-size: 1.5rem;
+  }
 
-    .container4 {
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
-        text-align: right;
-        font-size: 16px;
-    }
+  .container4 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    text-align: right;
+    font-size: 16px;
+  }
 
 }
 
 /* ===== DESKTOP: 1025px en adelante ===== */
-@media (min-width: 1366px) {
+@media (min-width: 1025px) {
   * {
     margin: 0;
     padding: 0;
@@ -490,7 +496,7 @@ body {
   }
 
   .header__principal--logo {
-    width: 10%;
+    width: clamp(200px, 1vw, 10rem);
     padding: 2em;
     display: inline;
   }
@@ -663,6 +669,7 @@ body {
   #f7 {
     background-color: #252222;
     color: #ccc;
+    padding: 0;
   }
 
   #f2 p,
@@ -675,7 +682,7 @@ body {
     letter-spacing: 0;
     word-spacing: 0;
     text-align: justify;
-    height: 250px;
+    height: 40vh;
   }
 
   #f2 img,
@@ -694,23 +701,24 @@ body {
 
   .abogado h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 5rem;
+    font-size: clamp(4rem, 1vw, 5rem);
   }
 
   .abogado h3 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 1vw, 3rem);
+    font-size: clamp(1.75rem, 1vw, 3rem);
     width: 100%;
+    margin: 1rem 0rem;
   }
 
   .abogado p {
 
     font-size: 1.5em;
-    padding: 0em 5em;
+    padding: 0em 3em;
     font-family: 'Merriweather', serif;
     line-height: 1.25em;
-    letter-spacing: 0;
-    word-spacing: 0.75rem;
+    letter-spacing: 0px;
+    word-spacing: 0px;
     text-align: left;
     width: 100%;
   }
@@ -759,7 +767,10 @@ body {
     text-align: left;
     gap: 1em;
     border-left: 3px solid wheat;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .container2 ul {

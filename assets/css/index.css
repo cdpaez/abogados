@@ -243,17 +243,17 @@ body {
 
 .presentacion__izq {
     position: absolute;
-        left: 0px;
-        bottom: 0px;
-        color: #f6f6f7;
-        background-color: rgba(0, 0, 0, 0.5);
-        text-shadow:
-            -1px -1px 0 black,
-            1px -1px 0 black,
-            -1px 1px 0 black,
-            1px 1px 0 black;
-        padding: 0.1em 0.2em;
-        border-radius: 0.2em;
+    left: 0px;
+    bottom: 0px;
+    color: #f6f6f7;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+    padding: 0.1em 0.2em;
+    border-radius: 0.2em;
 
     display: flex;
     flex-direction: column;
@@ -453,12 +453,14 @@ body {
     .section__inicio--pder {
         font-size: 1.3em;
     }
+
     .div__izq {
         position: relative;
         display: flex;
         width: 80vw;
         height: 100vh;
     }
+
     .presentacion__izq {
         position: absolute;
         left: 14px;
@@ -487,6 +489,7 @@ body {
 
         font-size: clamp(1.25rem, 2vw, 3rem);
     }
+
     .quienes__somos {
         flex: 1;
         /* clave para que crezca */
@@ -508,6 +511,7 @@ body {
     .quienes__somos--pder {
         font-size: 1.3em;
     }
+
     .footerbar {
         height: 100%;
         height: 600px;
@@ -582,7 +586,7 @@ body {
 }
 
 /* ===== DESKTOP: 1025px en adelante ===== */
-@media (min-width: 1366px) {
+@media (min-width: 1025px) {
     * {
         margin: 0;
         padding: 0;
@@ -619,7 +623,7 @@ body {
     }
 
     .header__principal--logo {
-        width: 10%;
+        width: clamp(200px, 1vw, 10rem);
         padding: 2em;
         display: inline;
     }
@@ -794,7 +798,7 @@ body {
     /* estilos para el contenido  */
     .quienes__somos h2 {
         width: 100%;
-        font-size: 3em;
+        font-size: clamp(1rem,2vw,3rem);
         letter-spacing: 0;
         padding: 0;
         margin: 0;
@@ -816,7 +820,8 @@ body {
         align-items: center;
         text-align: justify;
         line-height: 1.5em;
-        font-size: 3em;
+        font-size: clamp(1rem,3vw,4rem);
+        padding: 5rem;
 
     }
 
@@ -824,7 +829,8 @@ body {
         background-color: rgb(192, 185, 185);
         text-align: center;
         line-height: 1.5em;
-        font-size: 3em;
+        font-size: clamp(1rem,3vw,4rem);
+        padding: 5rem;
     }
 
     .quienes__somos--banner {
@@ -875,7 +881,10 @@ body {
         text-align: left;
         gap: 1em;
         border-left: 3px solid wheat;
-        font-size: 1.5rem;
+        font-size: clamp(1rem,1vw,2rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .container2 ul {
