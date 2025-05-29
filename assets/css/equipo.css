@@ -293,8 +293,7 @@ body {
 
   body {
     height: 100%;
-    padding: 2em;
-
+    padding: 0;
   }
 
   .envoltorio__principal {
