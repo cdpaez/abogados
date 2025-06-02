@@ -196,7 +196,7 @@ body {
 
 .div__correo {
   margin-top: 1rem;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
 }
 
 .contacto img {
@@ -289,7 +289,7 @@ body {
 }
 
 /* ===== DESKTOP: 1025px en adelante ===== */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
 
   html,
   body {
@@ -388,7 +388,7 @@ body {
   .contacto {
     flex: 1;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 30% 1fr;
     align-items: center;
     justify-content: space-around;
   }
@@ -400,8 +400,11 @@ body {
   .informacion {
     width: 33.33vw;
     position: relative;
+    padding: 0.5rem;
   }
-
+  .div__correo {
+    font-size: clamp(0.85rem,1vw,2rem);
+  }
   .informacion::after {
     content: "";
     position: absolute;

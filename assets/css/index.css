@@ -303,6 +303,7 @@ body {
 }
 
 .quienes__somos--pizq {
+    background-color:rgb(192, 185, 185);
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -328,6 +329,7 @@ body {
 }
 
 .quienes__somos--pder {
+    background-color:rgb(192, 185, 185);
     text-align: center;
     margin: 0 0 1em 0;
     padding: 0rem 2em;
@@ -586,7 +588,7 @@ body {
 }
 
 /* ===== DESKTOP: 1025px en adelante ===== */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     * {
         margin: 0;
         padding: 0;
@@ -778,12 +780,21 @@ body {
         display: flex;
         flex-direction: column;
     }
-
     .title__container {
         display: flex;
         flex-direction: row;
         align-items: center;
         color: #333;
+        width: 100%;
+    }
+
+    .title__container-mision {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: #333;
+        width: 100%;
+        margin: 1.5rem 0rem;
     }
 
     .line-q {
