@@ -303,7 +303,7 @@ body {
 }
 
 .quienes__somos--pizq {
-    background-color:rgb(192, 185, 185);
+    background-color: rgb(192, 185, 185);
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -329,7 +329,7 @@ body {
 }
 
 .quienes__somos--pder {
-    background-color:rgb(192, 185, 185);
+    background-color: rgb(192, 185, 185);
     text-align: center;
     margin: 0 0 1em 0;
     padding: 0rem 2em;
@@ -411,7 +411,7 @@ body {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     text-align: center;
-    font-size: 2em;
+    font-size: clamp(1rem, 2vw, 2rem);
 }
 
 /* ===== TABLET: 481px a 1024px ===== */
@@ -780,6 +780,7 @@ body {
         display: flex;
         flex-direction: column;
     }
+
     .title__container {
         display: flex;
         flex-direction: row;
@@ -809,7 +810,7 @@ body {
     /* estilos para el contenido  */
     .quienes__somos h2 {
         width: 100%;
-        font-size: clamp(1rem,2vw,3rem);
+        font-size: clamp(1rem, 2vw, 3rem);
         letter-spacing: 0;
         padding: 0;
         margin: 0;
@@ -831,7 +832,7 @@ body {
         align-items: center;
         text-align: justify;
         line-height: 1.5em;
-        font-size: clamp(1rem,3vw,4rem);
+        font-size: clamp(1rem, 3vw, 4rem);
         padding: 5rem;
 
     }
@@ -840,7 +841,7 @@ body {
         background-color: rgb(192, 185, 185);
         text-align: center;
         line-height: 1.5em;
-        font-size: clamp(1rem,3vw,4rem);
+        font-size: clamp(1rem, 3vw, 4rem);
         padding: 5rem;
     }
 
@@ -892,7 +893,7 @@ body {
         text-align: left;
         gap: 1em;
         border-left: 3px solid wheat;
-        font-size: clamp(1rem,1vw,2rem);
+        font-size: clamp(1rem, 1vw, 2rem);
         display: flex;
         flex-direction: column;
         justify-content: center;
