@@ -236,7 +236,7 @@ body {
 .div__izq {
     position: relative;
     background: url(/imagenes/index/juzgado.jpg) no-repeat right center / cover;
-    margin: 4rem 0em;
+    margin: auto 0 0 0;
     width: 100vw;
     height: 50vh;
 }
@@ -306,12 +306,13 @@ body {
     background-color: rgb(192, 185, 185);
     display: flex;
     flex-direction: column;
-    align-items: end;
-    text-align: right;
-    padding: 0rem 2em;
+    
+    align-items: center;
+    text-align: justify;
+    padding: 0rem 1em;
     line-height: 2em;
     font-family: 'Merriweather', serif;
-    font-size: clamp(1rem, 2vw + 1rem, 3rem);
+    font-size: clamp(1rem, 1.5vw, 2rem);
 
     color: #333;
     opacity: 0;
@@ -335,7 +336,7 @@ body {
     padding: 0rem 2em;
     line-height: 2em;
     font-family: 'Merriweather', serif;
-    font-size: clamp(1rem, 2vw + 1rem, 3rem);
+    font-size: clamp(1rem, 1.5vw, 2rem);
     color: #333;
     opacity: 0;
     transform: translateX(200px);

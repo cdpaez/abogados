@@ -173,7 +173,10 @@ body {
   transform: translateX(-200px);
   animation: slideIn 0.8s ease-out forwards;
   padding: 0em 2em;
-  margin: 1em 0em;
+  margin: 1em 1em;
+  background-color: rgb(192, 185, 185);
+  border: 1px solid rgb(192, 185, 185);
+  border-radius: 8px;
 
 }
 
@@ -701,10 +704,10 @@ body {
     left: 0px;
     width: 90%;
     height: 25%;
-    text-align: left;
+    text-align: justify;
     background-color: rgb(192, 185, 185);
 
-    font-size: clamp(13px, 1vw, 1.25rem);
+    font-size: clamp(0.7rem, 1.2vw, 3rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -718,10 +721,10 @@ body {
     right: 1%;
     width: 90%;
     height: 25%;
-    text-align: left;
+    text-align: justify;
     background-color: rgb(192, 185, 185);
 
-    font-size: clamp(13px, 1vw, 2rem);
+    font-size: clamp(0.7rem, 1.2vw, 3rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -735,10 +738,10 @@ body {
     left: 0px;
     width: 90%;
     height: 25%;
-    text-align: left;
+    text-align: justify;
     background-color: rgb(192, 185, 185);
 
-    font-size: clamp(13px, 1vw, 2rem);
+    font-size: clamp(0.7rem, 1.2vw, 3rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -752,10 +755,10 @@ body {
     right: 1%;
     width: 90%;
     height: 25%;
-    text-align: left;
+    text-align: justify;
     background-color: rgb(192, 185, 185);
 
-    font-size: clamp(13px, 1vw, 2rem);
+    font-size: clamp(0.7rem, 1.2vw, 3rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -769,10 +772,10 @@ body {
     left: 0px;
     width: 90%;
     height: 25%;
-    text-align: left;
+    text-align: justify;
     background-color: rgb(192, 185, 185);
 
-    font-size: clamp(13px, 1vw, 2rem);
+    font-size: clamp(0.7rem, 1.2vw, 3rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -786,10 +789,10 @@ body {
     right: 1%;
     width: 90%;
     height: 25%;
-    text-align: left;
+    text-align: justify;
     background-color: rgb(192, 185, 185);
 
-    font-size: clamp(13px, 1vw, 2rem);
+    font-size: clamp(0.7rem, 1.2vw, 3rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -804,10 +807,10 @@ body {
     left: 0px;
     width: 90%;
     height: 25%;
-    text-align: left;
+    text-align: justify;
     background-color: rgb(192, 185, 185);
 
-    font-size: clamp(13px, 1vw, 2rem);
+    font-size: clamp(0.7rem, 1.2vw, 3rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -821,10 +824,10 @@ body {
     right: 1%;
     width: 90%;
     height: 25%;
-    text-align: left;
+    text-align: justify;
     background-color: rgb(192, 185, 185);
 
-    font-size: clamp(13px, 1vw, 2rem);
+    font-size: clamp(0.7rem, 1.2vw, 3rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
