@@ -168,14 +168,14 @@ body {
   word-spacing: 0;
   font-family: 'Merriweather', serif;
   font-size: 0.8em;
-  color: #333;
+  color: #ccc;
   opacity: 0;
   transform: translateX(-200px);
   animation: slideIn 0.8s ease-out forwards;
   padding: 0em 2em;
   margin: 1em 1em;
-  background-color: rgb(192, 185, 185);
-  border: 1px solid rgb(192, 185, 185);
+  background-color: #3F4346;
+  border: 1px solid #3F4346;
   border-radius: 8px;
 
 }
@@ -705,7 +705,8 @@ body {
     width: 90%;
     height: 25%;
     text-align: justify;
-    background-color: rgb(192, 185, 185);
+    color: #ccc;
+    background-color: #3F4346;
 
     font-size: clamp(0.7rem, 1.2vw, 3rem);
     display: flex;
@@ -722,7 +723,8 @@ body {
     width: 90%;
     height: 25%;
     text-align: justify;
-    background-color: rgb(192, 185, 185);
+    color: #ccc;
+    background-color: #3F4346;
 
     font-size: clamp(0.7rem, 1.2vw, 3rem);
     display: flex;
@@ -739,7 +741,8 @@ body {
     width: 90%;
     height: 25%;
     text-align: justify;
-    background-color: rgb(192, 185, 185);
+    color: #ccc;
+    background-color: #3F4346;
 
     font-size: clamp(0.7rem, 1.2vw, 3rem);
     display: flex;
@@ -756,7 +759,8 @@ body {
     width: 90%;
     height: 25%;
     text-align: justify;
-    background-color: rgb(192, 185, 185);
+    color: #ccc;
+    background-color: #3F4346;
 
     font-size: clamp(0.7rem, 1.2vw, 3rem);
     display: flex;
@@ -773,7 +777,8 @@ body {
     width: 90%;
     height: 25%;
     text-align: justify;
-    background-color: rgb(192, 185, 185);
+    color: #ccc;
+    background-color: #3F4346;
 
     font-size: clamp(0.7rem, 1.2vw, 3rem);
     display: flex;
@@ -790,7 +795,8 @@ body {
     width: 90%;
     height: 25%;
     text-align: justify;
-    background-color: rgb(192, 185, 185);
+    color: #ccc;
+    background-color: #3F4346;
 
     font-size: clamp(0.7rem, 1.2vw, 3rem);
     display: flex;
@@ -808,7 +814,8 @@ body {
     width: 90%;
     height: 25%;
     text-align: justify;
-    background-color: rgb(192, 185, 185);
+    color: #ccc;
+    background-color: #3F4346;
 
     font-size: clamp(0.7rem, 1.2vw, 3rem);
     display: flex;
@@ -825,7 +832,8 @@ body {
     width: 90%;
     height: 25%;
     text-align: justify;
-    background-color: rgb(192, 185, 185);
+    color: #ccc;
+    background-color: #3F4346;
 
     font-size: clamp(0.7rem, 1.2vw, 3rem);
     display: flex;
