@@ -676,10 +676,9 @@ body {
   }
 
   #f1 img {
-    height: auto;
-    width: 100%;
-    max-width: 400px;
-    object-fit: contain;
+    max-width: 100%;
+    /* max-width: 400px; */
+    object-fit: cover;
   }
 
   #f2,
