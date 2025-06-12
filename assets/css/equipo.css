@@ -155,6 +155,16 @@ body {
   margin: 2em 0em; */
 }
 
+.equipos-abogados {
+  width: 100%;
+  height: 100%;
+
+}
+
+.equipos-abogados img {
+  width: 100%;
+}
+
 #f1 {
   background: url(/imagenes/equipo/maestrosinjusticia.png) no-repeat center / cover;
   width: 100%;
@@ -691,6 +701,7 @@ body {
     color: #ccc;
     padding: 0rem;
     justify-content: center;
+
   }
 
   #f2 p,

@@ -1,8 +1,10 @@
 :root {
     --primary-color: #3F4346;
     --secondary-color: #003366;
+    --color-logo-letras: #384955;
     --header-height: 100px;
     --tipografia: Arial, sans-serif;
+    --background-presentacion: url(/imagenes/index/juzgado.jpg) no-repeat right center / cover;
 }
 
 * {
@@ -167,11 +169,36 @@ body {
 }
 
 .presentacion {
+    background: var(--background-presentacion);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
+}
+
+.bg-color-esmerilado {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+}
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.presentacion__introduccion {
+    width: 100%;
+    text-align: justify;
+    color: #333;
+    padding: 2em;
+    line-height: 2em;
+    font-size: 3em;
+    font-family: 'Playfair Display', serif;
 }
 
 .fadeIn {
@@ -182,6 +209,7 @@ body {
     width: 100%;
     max-width: 300px;
     margin: 2em 0 0 0;
+    filter: invert(1);
 }
 
 @keyframes fadeIn {
@@ -200,7 +228,8 @@ body {
     font-size: 1.5em;
     font-weight: 700;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    color: #333;
+    color: var(--color-logo-letras);
+    filter: invert(1);
     text-align: center;
     margin: 0;
     line-height: 1.5em;
@@ -235,7 +264,6 @@ body {
 
 .div__izq {
     position: relative;
-    background: url(/imagenes/index/juzgado.jpg) no-repeat right center / cover;
     margin: auto 0 0 0;
     width: 100vw;
     height: 50vh;
@@ -306,7 +334,7 @@ body {
     background-color: rgb(192, 185, 185);
     display: flex;
     flex-direction: column;
-    
+
     align-items: center;
     text-align: justify;
     padding: 0rem 1em;
@@ -429,32 +457,6 @@ body {
         /* ocupa toda la pantalla */
         display: flex;
         flex-direction: column;
-    }
-
-    .section__inicio {
-        flex: 1;
-        /* clave para que crezca */
-        padding: 0;
-        margin: 0;
-    }
-
-    .section__inicio h1 {
-        font-size: 6em;
-        margin: 0;
-        padding: 0;
-    }
-
-    .section__inicio h2 {
-        font-size: 2em;
-        padding: 0;
-    }
-
-    .section__inicio--pizq {
-        font-size: 1.3em;
-    }
-
-    .section__inicio--pder {
-        font-size: 1.3em;
     }
 
     .div__izq {
@@ -695,12 +697,24 @@ body {
     .presentacion {
         height: 100%;
         width: 100%;
+        margin: 0 0 1.5em 0;
     }
 
-    .presentacion img {
+    .bg-color-esmerilado {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-shadow:
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            1px 1px 0 black;
+    }
+
+    .presentacion__img {
         width: 100%;
         max-width: 700px;
         margin: 2em 0 0 0;
+        filter: invert(1);
 
     }
 
@@ -716,10 +730,11 @@ body {
 
     /* estilos para el contenido  */
     .presentacion h1 {
-        color: #333;
+        color: var(--color-logo-letras);
         font-size: 3em;
         padding: 0;
         margin: 0;
+        filter: invert(1);
     }
 
     .presentacion h2 {
@@ -732,8 +747,7 @@ body {
         position: relative;
         display: flex;
         width: 100%;
-        height: 100dvh;
-        margin: 0 0 1.5em 0;
+        height: 50dvh;
     }
 
     .presentacion__izq {

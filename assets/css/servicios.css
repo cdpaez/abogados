@@ -143,13 +143,25 @@ body {
 }
 
 .presentacion__historia {
+  background-color: #f4f4f5;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1;
 }
 
-.presentacion__historia h1 {
+.presentacion__historia img {
+  width: 100%;
+}
+
+.imagenes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagenes-container h1 {
   font-size: clamp(0.5rem, 2vw + 1rem, 3rem);
   font-weight: 700;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -160,6 +172,35 @@ body {
   font-family: 'Playfair Display', serif;
   animation: fadeIn 0.6s ease-out;
   margin: 1em 0em;
+}
+
+.imagenes-container__elementos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.imagenes-container__elementos h3 {
+  font-size: 1rem;
+}
+
+.l1,
+.l2,
+.l3,
+.l4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdfefc;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+[class^="l"] img {
+  width: 30%;
 }
 
 .p1 {
@@ -178,33 +219,6 @@ body {
   border: 1px solid #3F4346;
   border-radius: 8px;
 
-}
-
-.platon img {
-  width: 100%;
-  height: auto;
-}
-
-.dr__jaramillo img {
-  width: 100%;
-  height: auto;
-}
-
-.profesionales img {
-  width: 100%;
-  height: auto;
-}
-
-.justicia img {
-  width: 100%;
-  height: auto;
-}
-
-.platon__texto,
-.dr__jaramillo__texto,
-.profesionales__texto,
-.justicia__texto {
-  display: none;
 }
 
 @keyframes fadeIn {
@@ -304,21 +318,57 @@ body {
     justify-content: center;
   }
 
-  .platon,
-  .dr__jaramillo,
-  .profesionales,
-  .justicia {
-    height: 100%;
-    width: 100%;
+  .l1,
+  .l2,
+  .l3,
+  .l4 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    background-color: #fdfefc;
+    padding: 2rem;
+    margin: 1rem;
+    width: 100%;
   }
 
-  .card {
-    width: 50%;
-    height: 50%;
+  [class^="l"] img {
+    width: 128px;
+    height: 128px;
+  }
 
+  .servicios-informacion__filas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+  }
+
+  .servicios-informacion__filas img {
+    width: 256px;
+    height: 256px;
+  }
+
+  .A,
+  .C {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow:
+      -1px -1px 0 black,
+      1px -1px 0 black,
+      -1px 1px 0 black,
+      1px 1px 0 black;
+  }
+
+  .B,
+  .D {
+    background-color: rgba(200, 200, 200, 0.5);
+    text-shadow:
+      -1px -1px 0 black,
+      1px -1px 0 black,
+      -1px 1px 0 black,
+      1px 1px 0 black;
   }
 
   .footerbar {
@@ -489,357 +539,59 @@ body {
 
   /* estilos para el contenido  */
 
-  .presentacion__historia {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* 2 columnas iguales */
-    grid-template-rows: repeat(5, auto);
-    /* 5 filas con altura automática */
-    gap: 1rem;
-    /* Espaciado entre filas y columnas */
-    padding: 1rem;
-    width: 100%;
-  }
-
-  .presentacion__historia h1 {
-    grid-column: 1 / 3;
-    /* de columna 1 a la 3 = ambas columnas */
-    grid-row: 1;
-    text-align: center;
-
-
-    font-size: 2.2em;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-
-    color: #333;
-    text-align: center;
-    margin: 0;
-    width: 100%;
-    letter-spacing: 0.2em;
-
-    font-family: 'Playfair Display', serif;
-
-    animation: fadeIn 0.6s ease-out;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(100px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .presentacion__historia .platon {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  .presentacion__historia .dr__jaramillo {
-    grid-column: 1;
-    grid-row: 3;
-  }
-
-  .presentacion__historia .profesionales {
-    grid-column: 1;
-    grid-row: 4;
-  }
-
-  .presentacion__historia .justicia {
-    grid-column: 1;
-    grid-row: 5;
-  }
-
-  .platon,
-  .dr__jaramillo,
-  .profesionales,
-  .justicia {
-    height: 100%;
-    width: 100%;
-    padding: 8rem 0rem;
-    position: relative;
-  }
-
-  .platon::after,
-  .dr__jaramillo::after,
-  .profesionales::after {
-    content: "";
-    position: absolute;
-    bottom: 10px;
-    left: 140px;
-    height: 4px;
-    width: 100%;
-    background-color: var(--primary-color);
-  }
-
-  .platon::before,
-  .dr__jaramillo::before,
-  .profesionales::before {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 140px;
-    height: 4px;
-    width: 100%;
-    background-color: var(--primary-color);
-  }
-
-  .platon__texto,
-  .dr__jaramillo__texto,
-  .profesionales__texto,
-  .justicia__texto {
-    height: 100%;
-    width: 100%;
-    display: block;
-    position: relative;
-  }
-
-  .platon__texto::after,
-  .dr__jaramillo__texto::after,
-  .profesionales__texto::after {
-    content: "";
-    position: absolute;
-    bottom: 10px;
-    right: 140px;
-    height: 4px;
-    width: 100%;
-    background-color: var(--primary-color);
-  }
-
-  .platon__texto::before,
-  .dr__jaramillo__texto::before,
-  .profesionales__texto::before {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    right: 140px;
-    height: 4px;
-    width: 100%;
-    background-color: var(--primary-color);
-  }
-
-  #parrafo__1,
-  #parrafo__2,
-  #parrafo__3,
-  #parrafo__4 {
+  .l1,
+  .l2,
+  .l3,
+  .l4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-
-  .card {
-    width: 80%;
-    height: 100%;
-    margin: 1rem auto;
-    perspective: 1000px;
-    cursor: pointer;
-  }
-
-  .card-inner {
+    align-items: center;
+    background-color: #fdfefc;
+    padding: 2rem;
+    margin: 1rem;
     width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    background-color: #003366;
   }
 
-  /* .card:hover .card-inner {
-    transform: rotateY(180deg);
-  } */
-
-  .card-front img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  [class^="l"] img {
+    width: 128px;
+    height: 128px;
   }
 
-  .card-front,
-  .card-back {
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
+  .servicios-informacion__filas {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 400px;
   }
 
-  .card-front {
-    background: white;
-    border: 1px solid #e5e7eb;
+  .servicios-informacion__filas img {
+    width: 256px;
+    height: 256px;
   }
-
-  .card-back p {
-    display: none;
-  }
-
-  .card-back {
-    background: #8b5cf6;
-    color: white;
-    transform: rotateY(180deg);
-  }
-
   .p1 {
-    animation: none;
-    font-size: 1.2rem;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin-bottom: 20px;
-    color: #212529;
-    line-height: 1.6;
-
+    font-size: clamp(1rem, 1.4vw, 4rem);
+  }
+  .A,
+  .C {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow:
+      -1px -1px 0 black,
+      1px -1px 0 black,
+      -1px 1px 0 black,
+      1px 1px 0 black;
   }
 
-  .primeroA.texto-animado1 {
-    animation: slideInLeft 1s ease-out forwards;
-    position: absolute;
-    top: 20%;
-    left: 0px;
-    width: 90%;
-    height: 25%;
-    text-align: justify;
-    color: #ccc;
-    background-color: #3F4346;
-
-    font-size: clamp(0.7rem, 1.2vw, 3rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    letter-spacing: 0.1rem;
-  }
-
-  .segundoA.texto-animado2 {
-    animation: slideInLeft 2s ease-out forwards;
-    position: absolute;
-    bottom: 20%;
-    right: 1%;
-    width: 90%;
-    height: 25%;
-    text-align: justify;
-    color: #ccc;
-    background-color: #3F4346;
-
-    font-size: clamp(0.7rem, 1.2vw, 3rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    letter-spacing: 0.1rem;
-  }
-
-  .primeroB.texto-animado1 {
-    animation: slideInLeft 1s ease-out forwards;
-    position: absolute;
-    top: 20%;
-    left: 0px;
-    width: 90%;
-    height: 25%;
-    text-align: justify;
-    color: #ccc;
-    background-color: #3F4346;
-
-    font-size: clamp(0.7rem, 1.2vw, 3rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    letter-spacing: 0.1rem;
-  }
-
-  .segundoB.texto-animado2 {
-    animation: slideInLeft 2s ease-out forwards;
-    position: absolute;
-    bottom: 20%;
-    right: 1%;
-    width: 90%;
-    height: 25%;
-    text-align: justify;
-    color: #ccc;
-    background-color: #3F4346;
-
-    font-size: clamp(0.7rem, 1.2vw, 3rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    letter-spacing: 0.1rem;
-  }
-
-  .primeroC.texto-animado1 {
-    animation: slideInLeft 1s ease-out forwards;
-    position: absolute;
-    top: 20%;
-    left: 0px;
-    width: 90%;
-    height: 25%;
-    text-align: justify;
-    color: #ccc;
-    background-color: #3F4346;
-
-    font-size: clamp(0.7rem, 1.2vw, 3rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    letter-spacing: 0.1rem;
-  }
-
-  .segundoC.texto-animado2 {
-    animation: slideInLeft 2s ease-out forwards;
-    position: absolute;
-    bottom: 20%;
-    right: 1%;
-    width: 90%;
-    height: 25%;
-    text-align: justify;
-    color: #ccc;
-    background-color: #3F4346;
-
-    font-size: clamp(0.7rem, 1.2vw, 3rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    letter-spacing: 0.1rem;
-  }
-
-  .primeroD.texto-animado1 {
-    animation: slideInLeft 1s ease-out forwards;
-    position: absolute;
-    top: 20%;
-    left: 0px;
-    width: 90%;
-    height: 25%;
-    text-align: justify;
-    color: #ccc;
-    background-color: #3F4346;
-
-    font-size: clamp(0.7rem, 1.2vw, 3rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    letter-spacing: 0.1rem;
-  }
-
-  .segundoD.texto-animado2 {
-    animation: slideInLeft 2s ease-out forwards;
-    position: absolute;
-    bottom: 20%;
-    right: 1%;
-    width: 90%;
-    height: 25%;
-    text-align: justify;
-    color: #ccc;
-    background-color: #3F4346;
-
-    font-size: clamp(0.7rem, 1.2vw, 3rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    letter-spacing: 0.1rem;
+  .B,
+  .D {
+    background-color: rgba(200, 200, 200, 0.5);
+    text-shadow:
+      -1px -1px 0 black,
+      1px -1px 0 black,
+      -1px 1px 0 black,
+      1px 1px 0 black;
   }
 
   @keyframes slideInLeft {
