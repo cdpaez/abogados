@@ -150,14 +150,13 @@ body {
 }
 
 .presentacion__historia h1 {
-  font-size: 1.5em;
+  font-size: clamp(0.5rem, 2vw + 1rem, 3rem);
   font-weight: 700;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   color: #333;
   text-align: center;
   line-height: 2em;
   width: 100%;
-  letter-spacing: 0.2em;
   font-family: 'Playfair Display', serif;
   animation: fadeIn 0.6s ease-out;
   margin: 1em 0em;
@@ -166,15 +165,18 @@ body {
 .p1 {
   text-align: justify;
   line-height: 3em;
-  letter-spacing: 0.1em;
+  word-spacing: 0;
   font-family: 'Merriweather', serif;
   font-size: 0.8em;
-  color: #333;
+  color: #ccc;
   opacity: 0;
   transform: translateX(-200px);
   animation: slideIn 0.8s ease-out forwards;
-  padding: 0em 5em;
-  margin: 1em 0em;
+  padding: 0em 2em;
+  margin: 1em 1em;
+  background-color: #3F4346;
+  border: 1px solid #3F4346;
+  border-radius: 8px;
 
 }
 
@@ -281,7 +283,7 @@ body {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   text-align: center;
-  font-size: 2em;
+  font-size: clamp(1rem, 2vw, 2rem);
 }
 
 /* ===== TABLET: 481px a 1024px ===== */
@@ -289,7 +291,7 @@ body {
 
   body {
     height: 100%;
-    padding: 2em;
+    padding: 0;
 
   }
 
@@ -298,12 +300,102 @@ body {
     /* ocupa toda la pantalla */
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .platon,
+  .dr__jaramillo,
+  .profesionales,
+  .justicia {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 50%;
+    height: 50%;
+
+  }
+
+  .footerbar {
+    height: 100%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 columnas iguales */
+    grid-template-rows: 80% 20%;
+    /* 80% primera fila, 20% segunda fila */
+    width: 100%;
+    /* Ajusta según necesidad */
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    gap: 1em;
+  }
+
+  .container1,
+  .container2,
+  .container3,
+  .container4 {
+    padding: 1em;
+  }
+
+  /* Distribución en la grid */
+  .container1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container1 img {
+    width: 60%;
+    height: auto;
+    filter: invert(1);
+  }
+
+  .container2 {
+    text-align: left;
+    gap: 1em;
+    border-left: 3px solid wheat;
+    font-size: 1.5rem;
+  }
+
+  .container2 ul {
+    margin: 0.5em 0em;
+  }
+
+  .container2 li {
+    list-style: none;
+  }
+
+
+  .container3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .container3 p {
+    font-size: 1.5rem;
+  }
+
+  .container4 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    text-align: right;
+    font-size: 16px;
   }
 
 }
 
 /* ===== DESKTOP: 1025px en adelante ===== */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   * {
     margin: 0;
     padding: 0;
@@ -340,7 +432,7 @@ body {
   }
 
   .header__principal--logo {
-    width: 10%;
+    width: clamp(200px, 1vw, 10rem);
     padding: 2em;
     display: inline;
   }
@@ -407,6 +499,7 @@ body {
     gap: 1rem;
     /* Espaciado entre filas y columnas */
     padding: 1rem;
+    width: 100%;
   }
 
   .presentacion__historia h1 {
@@ -469,20 +562,66 @@ body {
   .justicia {
     height: 100%;
     width: 100%;
+    padding: 8rem 0rem;
+    position: relative;
+  }
+
+  .platon::after,
+  .dr__jaramillo::after,
+  .profesionales::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 140px;
+    height: 4px;
+    width: 100%;
+    background-color: var(--primary-color);
+  }
+
+  .platon::before,
+  .dr__jaramillo::before,
+  .profesionales::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 140px;
+    height: 4px;
+    width: 100%;
+    background-color: var(--primary-color);
   }
 
   .platon__texto,
   .dr__jaramillo__texto,
   .profesionales__texto,
   .justicia__texto {
+    height: 100%;
+    width: 100%;
     display: block;
+    position: relative;
   }
 
-  .platon__texto,
-  .dr__jaramillo__texto,
-  .profesionales__texto,
-  .justicia__texto p {
-    font-size: 1.5em;
+  .platon__texto::after,
+  .dr__jaramillo__texto::after,
+  .profesionales__texto::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    right: 140px;
+    height: 4px;
+    width: 100%;
+    background-color: var(--primary-color);
+  }
+
+  .platon__texto::before,
+  .dr__jaramillo__texto::before,
+  .profesionales__texto::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 140px;
+    height: 4px;
+    width: 100%;
+    background-color: var(--primary-color);
   }
 
   #parrafo__1,
@@ -495,15 +634,14 @@ body {
   }
 
   .card {
-    width: 500px;
-    height: 500px;
+    width: 80%;
+    height: 100%;
     margin: 1rem auto;
     perspective: 1000px;
     cursor: pointer;
   }
 
   .card-inner {
-    position: relative;
     width: 100%;
     height: 100%;
     transition: transform 0.6s;
@@ -511,9 +649,9 @@ body {
     background-color: #003366;
   }
 
-  .card:hover .card-inner {
+  /* .card:hover .card-inner {
     transform: rotateY(180deg);
-  }
+  } */
 
   .card-front img {
     width: 100%;
@@ -523,7 +661,6 @@ body {
 
   .card-front,
   .card-back {
-    position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
@@ -549,10 +686,160 @@ body {
 
   .p1 {
     animation: none;
+    font-size: 1.2rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #212529;
+    line-height: 1.6;
+
   }
 
-  .p1.texto-animado {
-    animation: slideInLeft 0.8s ease-out forwards;
+  .primeroA.texto-animado1 {
+    animation: slideInLeft 1s ease-out forwards;
+    position: absolute;
+    top: 20%;
+    left: 0px;
+    width: 90%;
+    height: 25%;
+    text-align: justify;
+    color: #ccc;
+    background-color: #3F4346;
+
+    font-size: clamp(0.7rem, 1.2vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 0.1rem;
+  }
+
+  .segundoA.texto-animado2 {
+    animation: slideInLeft 2s ease-out forwards;
+    position: absolute;
+    bottom: 20%;
+    right: 1%;
+    width: 90%;
+    height: 25%;
+    text-align: justify;
+    color: #ccc;
+    background-color: #3F4346;
+
+    font-size: clamp(0.7rem, 1.2vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 0.1rem;
+  }
+
+  .primeroB.texto-animado1 {
+    animation: slideInLeft 1s ease-out forwards;
+    position: absolute;
+    top: 20%;
+    left: 0px;
+    width: 90%;
+    height: 25%;
+    text-align: justify;
+    color: #ccc;
+    background-color: #3F4346;
+
+    font-size: clamp(0.7rem, 1.2vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 0.1rem;
+  }
+
+  .segundoB.texto-animado2 {
+    animation: slideInLeft 2s ease-out forwards;
+    position: absolute;
+    bottom: 20%;
+    right: 1%;
+    width: 90%;
+    height: 25%;
+    text-align: justify;
+    color: #ccc;
+    background-color: #3F4346;
+
+    font-size: clamp(0.7rem, 1.2vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 0.1rem;
+  }
+
+  .primeroC.texto-animado1 {
+    animation: slideInLeft 1s ease-out forwards;
+    position: absolute;
+    top: 20%;
+    left: 0px;
+    width: 90%;
+    height: 25%;
+    text-align: justify;
+    color: #ccc;
+    background-color: #3F4346;
+
+    font-size: clamp(0.7rem, 1.2vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 0.1rem;
+  }
+
+  .segundoC.texto-animado2 {
+    animation: slideInLeft 2s ease-out forwards;
+    position: absolute;
+    bottom: 20%;
+    right: 1%;
+    width: 90%;
+    height: 25%;
+    text-align: justify;
+    color: #ccc;
+    background-color: #3F4346;
+
+    font-size: clamp(0.7rem, 1.2vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    letter-spacing: 0.1rem;
+  }
+
+  .primeroD.texto-animado1 {
+    animation: slideInLeft 1s ease-out forwards;
+    position: absolute;
+    top: 20%;
+    left: 0px;
+    width: 90%;
+    height: 25%;
+    text-align: justify;
+    color: #ccc;
+    background-color: #3F4346;
+
+    font-size: clamp(0.7rem, 1.2vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 0.1rem;
+  }
+
+  .segundoD.texto-animado2 {
+    animation: slideInLeft 2s ease-out forwards;
+    position: absolute;
+    bottom: 20%;
+    right: 1%;
+    width: 90%;
+    height: 25%;
+    text-align: justify;
+    color: #ccc;
+    background-color: #3F4346;
+
+    font-size: clamp(0.7rem, 1.2vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 0.1rem;
   }
 
   @keyframes slideInLeft {
@@ -569,7 +856,7 @@ body {
 
   .footerbar {
     height: 100%;
-    height: 300px;
+    height: 600px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* 2 columnas iguales */
@@ -594,10 +881,14 @@ body {
   .container1 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .container1 img {
-    width: 40%;
+    width: 60%;
     height: auto;
     filter: invert(1);
   }
@@ -606,6 +897,10 @@ body {
     text-align: left;
     gap: 1em;
     border-left: 3px solid wheat;
+    font-size: clamp(1rem, 1vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .container2 ul {
@@ -620,6 +915,10 @@ body {
   .container3 {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+  }
+
+  .container3 p {
+    font-size: 1.5rem;
   }
 
   .container4 {

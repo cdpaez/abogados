@@ -150,14 +150,37 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 0em 2em;
-  margin: 2em 0em;
+  gap: .5rem;
+  /* padding: 0em 2em;
+  margin: 2em 0em; */
+}
+
+#f1 {
+  background: url(/imagenes/equipo/maestrosinjusticia.png) no-repeat center / cover;
+  width: 100%;
+  color: #ccc;
+}
+
+#f2,
+#f3,
+#f4,
+#f5,
+#f6,
+#f7 {
+  background-color: #252222;
+  color: #ccc;
+  padding: 0rem;
+  justify-content: center;
 }
 
 .presentacion__abogados h3 {
   opacity: 0;
   transform: translateY(-20px);
   animation: fadeInDown 1s forwards;
+  width: 100vw;
+  text-align: center;
+  font-weight: 400;
+  margin: 1rem;
 }
 
 
@@ -177,26 +200,40 @@ body {
 }
 
 .abogado img {
-  width: 100%;
-  border: 2px solid #ccc;
+  width: 80%;
+  border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
+  margin: 20px 0 0 0;
 }
+
 
 .abogado img:hover {
   transform: scale(1.1);
 }
 
-.abogado h3 {
-  margin: 0.5em 0 0.2em 0;
+.abogado h1 {
+  margin: 1rem;
+  font-weight: 900;
   font-family: 'Playfair Display', serif;
+  font-size: clamp(1.25rem, 1vw, 1.5rem);
+  width: 100vw;
+  text-align: center;
 }
 
 .abogado p {
   margin: 0.2em 0;
+  letter-spacing: 0px;
+  word-spacing: 0px;
   font-family: 'Merriweather', serif;
   line-height: 35px;
+  width: 90vw;
+}
+
+.abogado__correo {
+  display: flex;
+  margin: 20px 0 20px 0;
 }
 
 @keyframes fadeInDown {
@@ -270,7 +307,7 @@ body {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   text-align: center;
-  font-size: 2em;
+  font-size: clamp(1rem, 2vw, 2rem);
 }
 
 /* ===== TABLET: 481px a 1024px ===== */
@@ -278,8 +315,7 @@ body {
 
   body {
     height: 100%;
-    padding: 2em;
-
+    padding: 0;
   }
 
   .envoltorio__principal {
@@ -294,6 +330,39 @@ body {
     /* clave para que crezca */
     padding: 0;
     margin: 0;
+  }
+
+  #f1 {
+    background: url(/imagenes/equipo/maestrosinjusticia.png) no-repeat center / cover;
+    width: 100%;
+    color: #ccc;
+  }
+
+  #f1 img {
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    object-fit: contain;
+  }
+
+  #f2,
+  #f3,
+  #f4,
+  #f5,
+  #f6,
+  #f7 {
+    background-color: #252222;
+    color: #ccc;
+  }
+
+  #f2 img,
+  #f3 img,
+  #f4 img,
+  #f5 img,
+  #f6 img,
+  #f7 img {
+    height: 270px;
+    max-width: 370px;
   }
 
   .abogado {
@@ -334,10 +403,81 @@ body {
     line-height: 35px;
   }
 
+  .footerbar {
+    height: 100%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 columnas iguales */
+    grid-template-rows: 80% 20%;
+    /* 80% primera fila, 20% segunda fila */
+    width: 100%;
+    /* Ajusta según necesidad */
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    gap: 1em;
+  }
+
+  .container1,
+  .container2,
+  .container3,
+  .container4 {
+    padding: 1em;
+  }
+
+  /* Distribución en la grid */
+  .container1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container1 img {
+    width: 60%;
+    height: auto;
+    filter: invert(1);
+  }
+
+  .container2 {
+    text-align: left;
+    gap: 1em;
+    border-left: 3px solid wheat;
+    font-size: 1.5rem;
+  }
+
+  .container2 ul {
+    margin: 0.5em 0em;
+  }
+
+  .container2 li {
+    list-style: none;
+  }
+
+
+  .container3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .container3 p {
+    font-size: 1.5rem;
+  }
+
+  .container4 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    text-align: right;
+    font-size: 16px;
+  }
+
 }
 
 /* ===== DESKTOP: 1025px en adelante ===== */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   * {
     margin: 0;
     padding: 0;
@@ -377,7 +517,7 @@ body {
   }
 
   .header__principal--logo {
-    width: 10%;
+    width: clamp(200px, 1vw, 10rem);
     padding: 2em;
     display: inline;
   }
@@ -438,7 +578,7 @@ body {
     /* clave para que crezca */
     flex: 1;
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: auto repeat(3, minmax(400px, 700px));
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "f1 f1"
@@ -453,12 +593,18 @@ body {
   }
 
 
+
   #f1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     grid-area: f1;
 
+  }
+
+  .abogado__correo {
+    margin: 1rem 0rem;
+    font-size: 1.5rem;
   }
 
   #f2 {
@@ -524,55 +670,85 @@ body {
   }
 
   #f1 {
-    background: url(/imagenes/equipo/maestro.png) no-repeat center / cover;
+    background: url(/imagenes/equipo/maestrosinjusticia.png) no-repeat center / cover;
     width: 100%;
     color: #ccc;
   }
+
   #f1 img {
-    height: auto;
-    width: 100%;
-    max-width: 400px;
-    object-fit: contain;
+    max-width: 100%;
+    /* max-width: 400px; */
+    object-fit: cover;
   }
+
   #f2,
   #f3,
   #f4,
   #f5,
-  #f6 {
-    background: url(/imagenes/equipo/alummno.png) no-repeat center / cover;
-    color: white;
+  #f6,
+  #f7 {
+    background-color: #252222;
+    color: #ccc;
+    padding: 0rem;
+    justify-content: center;
   }
+
+  #f2 p,
+  #f3 p,
+  #f4 p,
+  #f5 p,
+  #f6 p,
+  #f7 p {
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    letter-spacing: 0;
+    word-spacing: 0;
+    text-align: justify;
+    height: 40vh;
+  }
+
   #f2 img,
   #f3 img,
   #f4 img,
   #f5 img,
-  #f6 img {
-    height: 270px;
-    max-width: 370px;
+  #f6 img,
+  #f7 img {
+    height: auto;
+    width: 100%;
+    max-width: 600px;
   }
 
   .abogado img:hover {
     transform: scale(0.9);
   }
 
+  .abogado h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(4rem, 1vw, 5rem);
+  }
+
   .abogado h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 3em;
+    font-size: clamp(1.75rem, 1vw, 3rem);
+    width: 100%;
+    margin: 1rem 0rem;
   }
 
   .abogado p {
 
     font-size: 1.5em;
-    padding: 0em 5em;
+    padding: 0em 3em;
     font-family: 'Merriweather', serif;
-    line-height: 1.5em;
-    letter-spacing: 0;
-    text-align: center;
+    line-height: 1.25em;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    text-align: left;
+    width: 100%;
   }
 
   .footerbar {
+    margin: 1rem 0 0 0;
     height: 100%;
-    height: 300px;
+    height: 600px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* 2 columnas iguales */
@@ -597,10 +773,14 @@ body {
   .container1 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .container1 img {
-    width: 40%;
+    width: 60%;
     height: auto;
     filter: invert(1);
   }
@@ -609,6 +789,10 @@ body {
     text-align: left;
     gap: 1em;
     border-left: 3px solid wheat;
+    font-size: clamp(1rem, 1vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .container2 ul {
@@ -623,6 +807,10 @@ body {
   .container3 {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+  }
+
+  .container3 p {
+    font-size: 1.5rem;
   }
 
   .container4 {
