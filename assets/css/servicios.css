@@ -152,6 +152,19 @@ body {
 
 .presentacion__historia img {
   width: 100%;
+  animation: abajoarriba 0.8s ease-out forwards;
+}
+
+@keyframes abajoarriba {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .imagenes-container {
@@ -538,6 +551,13 @@ body {
   }
 
   /* estilos para el contenido  */
+  .imagenes-container__elementos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+  }
 
   .l1,
   .l2,
@@ -571,9 +591,11 @@ body {
     width: 256px;
     height: 256px;
   }
+
   .p1 {
     font-size: clamp(1rem, 1.4vw, 4rem);
   }
+
   .A,
   .C {
     background-color: rgba(0, 0, 0, 0.5);

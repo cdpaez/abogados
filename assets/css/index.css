@@ -179,7 +179,7 @@ body {
 
 .bg-color-esmerilado {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
     text-shadow:
         -1px -1px 0 black,
         1px -1px 0 black,
@@ -274,12 +274,12 @@ body {
     left: 0px;
     bottom: 0px;
     color: #f6f6f7;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5);
     text-shadow:
         -1px -1px 0 black,
         1px -1px 0 black,
         -1px 1px 0 black,
-        1px 1px 0 black;
+        1px 1px 0 black; */
     padding: 0.1em 0.2em;
     border-radius: 0.2em;
 
@@ -471,12 +471,12 @@ body {
         left: 14px;
         bottom: 0px;
         color: #f6f6f7;
-        background-color: rgba(0, 0, 0, 0.5);
+        /* background-color: rgba(0, 0, 0, 0.5);
         text-shadow:
             -1px -1px 0 black,
             1px -1px 0 black,
             -1px 1px 0 black,
-            1px 1px 0 black;
+            1px 1px 0 black; */
         padding: 0.1em 0.2em;
         border-radius: 0.2em;
 
@@ -702,7 +702,7 @@ body {
 
     .bg-color-esmerilado {
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.9);
         text-shadow:
             -1px -1px 0 black,
             1px -1px 0 black,
@@ -755,12 +755,12 @@ body {
         left: 14px;
         bottom: 0px;
         color: #f6f6f7;
-        background-color: rgba(0, 0, 0, 0.5);
+        /* background-color: rgba(0, 0, 0, 0.5);
         text-shadow:
             -1px -1px 0 black,
             1px -1px 0 black,
             -1px 1px 0 black,
-            1px 1px 0 black;
+            1px 1px 0 black; */
         padding: 0.1em 0.2em;
         border-radius: 0.2em;
 
