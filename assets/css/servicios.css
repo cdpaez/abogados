@@ -142,6 +142,7 @@ body {
   color: #fff;
 }
 
+/* contenido principal */
 .presentacion__historia {
   background-color: #f4f4f5;
   display: flex;
@@ -216,7 +217,35 @@ body {
   width: 30%;
 }
 
-.p1 {
+.servicios-informacion__filas {
+  
+}
+
+.servicios-informacion__filas img {
+  
+}
+
+.A,
+.C {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; */
+}
+
+.B,
+.D {
+  background-color: rgba(200, 200, 200, 0.5);
+  /* text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; */
+}
+
+.p1.AA, .p1.CC {
   text-align: justify;
   line-height: 3em;
   word-spacing: 0;
@@ -228,9 +257,26 @@ body {
   animation: slideIn 0.8s ease-out forwards;
   padding: 0em 2em;
   margin: 1em 1em;
-  background-color: #3F4346;
+  /* background-color: #3F4346;
   border: 1px solid #3F4346;
-  border-radius: 8px;
+  border-radius: 8px; */
+
+}
+.p1.BB, .p1.DD {
+  text-align: justify;
+  line-height: 3em;
+  word-spacing: 0;
+  font-family: 'Merriweather', serif;
+  font-size: 0.8em;
+  color: var(--primary-color);
+  opacity: 0;
+  transform: translateX(-200px);
+  animation: slideIn 0.8s ease-out forwards;
+  padding: 0em 2em;
+  margin: 1em 1em;
+  /* background-color: #3F4346;
+  border: 1px solid #3F4346;
+  border-radius: 8px; */
 
 }
 
@@ -367,21 +413,21 @@ body {
   .A,
   .C {
     background-color: rgba(0, 0, 0, 0.5);
-    text-shadow:
+    /* text-shadow:
       -1px -1px 0 black,
       1px -1px 0 black,
       -1px 1px 0 black,
-      1px 1px 0 black;
+      1px 1px 0 black; */
   }
 
   .B,
   .D {
     background-color: rgba(200, 200, 200, 0.5);
-    text-shadow:
+    /* text-shadow:
       -1px -1px 0 black,
       1px -1px 0 black,
       -1px 1px 0 black,
-      1px 1px 0 black;
+      1px 1px 0 black; */
   }
 
   .footerbar {
@@ -592,28 +638,28 @@ body {
     height: 256px;
   }
 
-  .p1 {
-    font-size: clamp(1rem, 1.4vw, 4rem);
+  .p1.AA, .p1.BB, .p1.CC, .p1.DD {
+    font-size: clamp(1rem, 1.5vw, 4rem);
   }
 
   .A,
   .C {
     background-color: rgba(0, 0, 0, 0.5);
-    text-shadow:
+    /* text-shadow:
       -1px -1px 0 black,
       1px -1px 0 black,
       -1px 1px 0 black,
-      1px 1px 0 black;
+      1px 1px 0 black; */
   }
 
   .B,
   .D {
     background-color: rgba(200, 200, 200, 0.5);
-    text-shadow:
+    /* text-shadow:
       -1px -1px 0 black,
       1px -1px 0 black,
       -1px 1px 0 black,
-      1px 1px 0 black;
+      1px 1px 0 black; */
   }
 
   @keyframes slideInLeft {
