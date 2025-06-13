@@ -217,14 +217,6 @@ body {
   width: 30%;
 }
 
-.servicios-informacion__filas {
-  
-}
-
-.servicios-informacion__filas img {
-  
-}
-
 .A,
 .C {
   background-color: rgba(0, 0, 0, 0.5);
@@ -639,7 +631,7 @@ body {
   }
 
   .p1.AA, .p1.BB, .p1.CC, .p1.DD {
-    font-size: clamp(1rem, 1.5vw, 4rem);
+    font-size: clamp(1.3rem, 1.1vw, 4rem);
   }
 
   .A,

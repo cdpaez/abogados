@@ -179,18 +179,20 @@ body {
 
 .bg-color-esmerilado {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
     text-shadow:
         -1px -1px 0 black,
         1px -1px 0 black,
         -1px 1px 0 black,
         1px 1px 0 black;
 }
+
 .logo-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .presentacion__introduccion {
     width: 100%;
     text-align: justify;
@@ -330,6 +332,17 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
+.quienes__somos--info-container {
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+.quienes__somos--info-container img {
+    width: 100%;
+    margin: 1rem 0;
+}
+
 .quienes__somos--pizq {
     background-color: rgb(192, 185, 185);
     display: flex;
@@ -379,7 +392,7 @@ body {
 
 .quienes__somos--banner {
     width: 100%;
-    padding: 2em;
+    padding: 0;
 
 }
 
@@ -702,7 +715,7 @@ body {
 
     .bg-color-esmerilado {
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(0, 0, 0, 0.7);
         text-shadow:
             -1px -1px 0 black,
             1px -1px 0 black,
@@ -753,7 +766,7 @@ body {
     .presentacion__izq {
         position: absolute;
         left: 14px;
-        bottom: 0px;
+        bottom: 250px;
         color: #f6f6f7;
         /* background-color: rgba(0, 0, 0, 0.5);
         text-shadow:
@@ -770,7 +783,7 @@ body {
         justify-content: center;
 
         height: auto;
-        width: 50%;
+        width: 100%;
 
         padding: 2rem;
 
@@ -841,18 +854,52 @@ body {
         padding: 2em;
     }
 
-
-
-    .quienes__somos--pizq {
-        background-color: rgb(192, 185, 185);
-        align-items: center;
-        text-align: justify;
-        line-height: 1.5em;
-        font-size: clamp(1rem, 3vw, 4rem);
-        padding: 5rem;
+    .quienes__somos--info-container {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        place-items: align-items;
 
     }
 
+    .quienes__somos--info-container img {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* .quienes__somos--pizq img {
+        width: 25%;
+        height: 25%;
+    } */
+
+    .quienes__somos--pizq {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ccc;
+        background-color: rgb(192, 185, 185);
+        text-align: justify;
+        font-size: clamp(1.2rem, 1vw, 2rem);
+        padding: 1rem;
+
+    }
+
+    .quienes__somos--pizq {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ccc;
+        background-color: rgb(192, 185, 185);
+        text-align: center;
+        font-size: clamp(1rem, 3vw, 4rem);
+        padding: 1rem;
+
+    }
+    .textopequeno {
+        font-size: clamp(1rem, 1.5vw, 3rem);
+        text-align: justify;
+    }
     .quienes__somos--pder {
         background-color: rgb(192, 185, 185);
         text-align: center;
