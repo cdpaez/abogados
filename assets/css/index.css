@@ -179,7 +179,7 @@ body {
 
 .bg-color-esmerilado {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     text-shadow:
         -1px -1px 0 black,
         1px -1px 0 black,
@@ -191,6 +191,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 80dvh;
+    justify-content: end;
 }
 
 .presentacion__introduccion {
@@ -715,7 +717,7 @@ body {
 
     .bg-color-esmerilado {
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.5);
         text-shadow:
             -1px -1px 0 black,
             1px -1px 0 black,
@@ -892,19 +894,21 @@ body {
         border: 1px solid #ccc;
         background-color: rgb(192, 185, 185);
         text-align: center;
-        font-size: clamp(1rem, 3vw, 4rem);
+        font-size: clamp(1rem, 2.5vw, 4rem);
         padding: 1rem;
 
     }
+
     .textopequeno {
         font-size: clamp(1rem, 1.5vw, 3rem);
         text-align: justify;
     }
+
     .quienes__somos--pder {
         background-color: rgb(192, 185, 185);
         text-align: center;
         line-height: 1.5em;
-        font-size: clamp(1rem, 3vw, 4rem);
+        font-size: clamp(1rem, 2.5vw, 4rem);
         padding: 5rem;
     }
 
