@@ -163,6 +163,19 @@ body {
 
 .equipos-abogados img {
   width: 100%;
+  animation: abajoarriba 0.8s ease-out forwards;
+}
+
+@keyframes abajoarriba {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 #f1 {
