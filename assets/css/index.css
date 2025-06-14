@@ -873,7 +873,7 @@ body {
         height: 25%;
     } */
 
-    .quienes__somos--pizq {
+    /* .quienes__somos--pizq {
         height: 100%;
         display: flex;
         align-items: center;
@@ -884,7 +884,7 @@ body {
         font-size: clamp(1.2rem, 1vw, 2rem);
         padding: 1rem;
 
-    }
+    } */
 
     .quienes__somos--pizq {
         height: 100%;
@@ -894,7 +894,7 @@ body {
         border: 1px solid #ccc;
         background-color: rgb(192, 185, 185);
         text-align: center;
-        font-size: clamp(1rem, 2.5vw, 4rem);
+        font-size: clamp(1rem, 2.3vw, 4rem);
         padding: 1rem;
 
     }
@@ -908,7 +908,7 @@ body {
         background-color: rgb(192, 185, 185);
         text-align: center;
         line-height: 1.5em;
-        font-size: clamp(1rem, 2.5vw, 4rem);
+        font-size: clamp(1rem, 2.3vw, 4rem);
         padding: 5rem;
     }
 
