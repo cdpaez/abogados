@@ -217,8 +217,17 @@ body {
   width: 30%;
 }
 
+.servicios-informacion img {
+  margin: 1rem 0;
+  width: 50%;
+  animation: abajoarriba 0.8s ease-out forwards;
+}
+
 .A,
 .C {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   /* text-shadow:
     -1px -1px 0 black,
@@ -229,6 +238,9 @@ body {
 
 .B,
 .D {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: rgba(200, 200, 200, 0.5);
   /* text-shadow:
     -1px -1px 0 black,
@@ -403,6 +415,7 @@ body {
   .servicios-informacion__filas img {
     width: 256px;
     height: 256px;
+    margin: 0 2rem;
   }
 
   .A,
