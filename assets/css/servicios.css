@@ -612,13 +612,13 @@ body {
   .imagenes-container__elementos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
     height: 100%;
   }
 
   .imagenes-container__elementos h3 {
-    font-size: 1rem;
+    font-size: 1.7rem;
     margin: .7rem 0;
   }
 
@@ -632,8 +632,8 @@ body {
     align-items: center;
     background-color: #fdfefc;
     padding: 0;
-    margin: 1rem;
-    width: 90%;
+    margin: 0;
+    width: 100%;
   }
 
   [class^="l"] img {
